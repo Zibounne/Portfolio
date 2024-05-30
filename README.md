@@ -14,7 +14,7 @@ Coding Time {Portfolio}
 
 ## Screenshots
 
-[UNDER_CONSTRUCTION]
+[#]
 
 
 ## Author
@@ -23,6 +23,6 @@ Real Name : Tarik DAHHANE
 <br>
 Pseudo : Zibounne
 <br><br>
-Linkedin   : [UNDER_CONSTRUCTION]
+Linkedin   : [#]
 <br>
 GitHub : [Zibounne](https://github.com/Zibounne/)

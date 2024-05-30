@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.homeSection1 h1 {
+  @apply text-center;
+}/*# sourceMappingURL=styles.css.map */

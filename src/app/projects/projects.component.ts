@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.sass'
 })
 export class ProjectsComponent {
 

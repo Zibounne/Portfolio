@@ -10,7 +10,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     RouterLinkActive,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styleUrl: '../styles/styles.css'
 })
 export class AppComponent {
   title = 'Portfolio';
