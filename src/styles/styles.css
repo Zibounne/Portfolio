@@ -1,31 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#headerSection {
-  background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
+header {
+  @apply w-1/2 bg-black text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4;
 }
-#headerSection header {
-  @apply w-1/2 m-auto bg-black text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white;
-}
-#headerSection header nav {
+header nav {
   @apply flex justify-between;
 }
-#headerSection header nav ul {
+header nav ul {
   @apply flex m-auto;
 }
-#headerSection header nav ul li {
+header nav ul li {
   @apply pr-5 flex;
 }
-#headerSection header nav ul li button {
+header nav ul li button {
   @apply transition-all duration-150 ease-in-out;
 }
-#headerSection header nav ul li button i {
+header nav ul li button i {
   @apply pl-2;
 }
-#headerSection header nav ul li button:hover {
+header nav ul li button:hover {
   @apply border-b-sky-600 text-sky-600;
 }
-#headerSection header nav ul li button.active {
+header nav ul li button.active {
   @apply border-4 border-sky-600 bg-sky-600 rounded text-white;
 }
 
@@ -36,21 +33,65 @@ footer p span {
   @apply text-sky-600 font-bold;
 }
 
+@keyframes translate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes slide {
+  0% {
+    @apply w-[35%] bg-green-500;
+  }
+  100% {
+    @apply w-[0%] bg-green-500;
+  }
+}
+@keyframes blinkColor {
+  0% {
+    color: #FFFF99;
+  }
+  50% {
+    color: #FFFF00;
+  }
+  100% {
+    color: #FFD700;
+  }
+}
 #homeSection1 {
   background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
-  height: 375px;
-  @apply flex justify-around py-5;
+  @apply flex justify-around pt-14 py-5 h-[410px];
 }
 #homeSection1 #homeSection1div1 {
   @apply w-1/2;
 }
 #homeSection1 #homeSection1div1 img {
-  width: 700px;
-  height: 500px;
-  @apply m-auto;
+  animation: translate 0.75s ease-out;
+  @apply m-auto w-[700px] h-[500px];
 }
 #homeSection1 #homeSection1div2 {
   @apply w-1/2 font-bold text-7xl mb-10 my-auto;
+}
+#homeSection1 #homeSection1div2 p {
+  @apply py-2;
 }
 #homeSection1 #homeSection1div2 a {
   @apply mt-5;
@@ -60,4 +101,20 @@ footer p span {
 }
 #homeSection1 #homeSection1div2 button:hover {
   @apply scale-105;
+}
+
+.homeSection1-textReveal-Animation {
+  animation: reveal 1.5s ease-in;
+}
+
+.homeSection1-blink-Animation {
+  animation: blink 0.75s ease-in-out 2;
+}
+
+.homeSection1-slideText-Animation {
+  animation: slide 0.5s ease-in-out forwards;
+}
+
+.homeSection1-blinkColor-Animation {
+  animation: blinkColor 1s linear infinite alternate;
 }/*# sourceMappingURL=styles.css.map */

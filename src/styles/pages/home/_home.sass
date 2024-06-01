@@ -1,15 +1,56 @@
+///////////////////////// KeyFrame /////////////////////////
+
+//Section 1
+
+@keyframes translate
+    0%
+        transform: translateX(-100%)
+    100%
+        transform: translateX(0%)
+
+@keyframes reveal
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes blink
+    0%, 100%
+        opacity: 1
+    50%
+        opacity: 0
+
+@keyframes slide
+    0%
+        @apply w-[35%] bg-green-500
+    100%
+        @apply w-[0%] bg-green-500
+@keyframes blinkColor
+    0%
+        color: #FFFF99
+    50%
+        color: #FFFF00
+    100%
+        color: #FFD700
+
+//Section 2
+
+/////////////////////////// Home ///////////////////////////
+
+//Section 1
+
 #homeSection1
     background: radial-gradient(ellipse, rgba(32,35,42, 0.80), rgba(40, 44, 52, 1))
-    height: 375px
-    @apply flex justify-around py-5
+    @apply flex justify-around pt-14 py-5 h-[410px]
     #homeSection1div1
         @apply w-1/2
         img
-            width: 700px
-            height: 500px
-            @apply m-auto
+            animation: translate 0.75s ease-out
+            @apply m-auto w-[700px] h-[500px]
     #homeSection1div2
         @apply w-1/2 font-bold text-7xl mb-10 my-auto
+        p
+            @apply py-2
         a
             @apply mt-5
         button
@@ -17,4 +58,16 @@
         button:hover
             @apply scale-105
 
-            
+//Section 1 | Animation
+
+.homeSection1-textReveal-Animation
+    animation: reveal 1.5s ease-in
+.homeSection1-blink-Animation
+    animation: blink 0.75s ease-in-out 2
+.homeSection1-slideText-Animation
+    animation: slide 0.5s ease-in-out forwards
+.homeSection1-blinkColor-Animation
+    animation: blinkColor 1s linear infinite alternate
+
+//Section 2
+#homeSection2
