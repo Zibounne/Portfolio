@@ -1,6 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+header {
+  @apply w-1/2 m-auto bg-slate-950 text-white py-2 text-xl font-bold rounded-b-lg;
+}
+header nav {
+  @apply flex justify-between;
+}
+header nav ul {
+  @apply flex m-auto;
+}
+header nav ul li {
+  @apply pr-5 flex;
+}
+header nav ul li button {
+  @apply transition-all duration-150 ease-in-out;
+}
+header nav ul li button i {
+  @apply pl-2;
+}
+header nav ul li button:hover {
+  @apply border-b-green-500 text-green-500;
+}
+header nav ul li button.active {
+  @apply border-4 border-gray-500 bg-gray-500 rounded text-green-500;
+}
+
+footer p {
+  @apply py-2 text-center text-white bg-slate-950;
+}
+footer p span {
+  @apply text-green-500 font-bold;
+}
+
 .homeSection1 h1 {
   @apply text-center;
 }/*# sourceMappingURL=styles.css.map */

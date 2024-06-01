@@ -1,0 +1,16 @@
+header
+    @apply w-1/2 m-auto bg-slate-950 text-white py-2 text-xl font-bold rounded-b-lg
+    nav
+        @apply flex justify-between
+        ul
+            @apply flex m-auto
+            li
+                @apply pr-5 flex
+                button
+                    @apply transition-all duration-150 ease-in-out
+                    i
+                        @apply pl-2
+                button:hover
+                    @apply border-b-green-500 text-green-500
+                button.active
+                    @apply border-4 border-gray-500 bg-gray-500 rounded text-green-500
