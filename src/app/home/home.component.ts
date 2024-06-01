@@ -9,8 +9,6 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-
-  //title: string = "Portfolio | Home";
   
   constructor(private titleService:Title) {
     this.titleService.setTitle("Portfolio | Home");

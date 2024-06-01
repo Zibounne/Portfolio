@@ -1,38 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-header {
-  @apply w-1/2 m-auto bg-slate-950 text-white py-2 text-xl font-bold rounded-b-lg;
+#headerSection {
+  background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
 }
-header nav {
+#headerSection header {
+  @apply w-1/2 m-auto bg-black text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white;
+}
+#headerSection header nav {
   @apply flex justify-between;
 }
-header nav ul {
+#headerSection header nav ul {
   @apply flex m-auto;
 }
-header nav ul li {
+#headerSection header nav ul li {
   @apply pr-5 flex;
 }
-header nav ul li button {
+#headerSection header nav ul li button {
   @apply transition-all duration-150 ease-in-out;
 }
-header nav ul li button i {
+#headerSection header nav ul li button i {
   @apply pl-2;
 }
-header nav ul li button:hover {
-  @apply border-b-green-500 text-green-500;
+#headerSection header nav ul li button:hover {
+  @apply border-b-sky-600 text-sky-600;
 }
-header nav ul li button.active {
-  @apply border-4 border-green-500 bg-green-500 rounded text-white;
+#headerSection header nav ul li button.active {
+  @apply border-4 border-sky-600 bg-sky-600 rounded text-white;
 }
 
 footer p {
-  @apply py-2 text-center text-white bg-slate-950;
+  @apply py-2 text-center text-white bg-black;
 }
 footer p span {
-  @apply text-green-500 font-bold;
+  @apply text-sky-600 font-bold;
 }
 
-.homeSection1 h1 {
-  @apply text-center;
+#homeSection1 {
+  background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
+  height: 375px;
+  @apply flex justify-around py-5;
+}
+#homeSection1 #homeSection1div1 {
+  @apply w-1/2;
+}
+#homeSection1 #homeSection1div1 img {
+  width: 700px;
+  height: 500px;
+  @apply m-auto;
+}
+#homeSection1 #homeSection1div2 {
+  @apply w-1/2 font-bold text-7xl mb-10 my-auto;
+}
+#homeSection1 #homeSection1div2 a {
+  @apply mt-5;
+}
+#homeSection1 #homeSection1div2 button {
+  @apply border-4 border-black bg-black rounded-xl text-white transition duration-300 ease-in-out text-6xl;
+}
+#homeSection1 #homeSection1div2 button:hover {
+  @apply scale-105;
 }/*# sourceMappingURL=styles.css.map */

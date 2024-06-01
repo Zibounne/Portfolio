@@ -1,3 +1,20 @@
-.homeSection1
-    h1
-        @apply text-center
+#homeSection1
+    background: radial-gradient(ellipse, rgba(32,35,42, 0.80), rgba(40, 44, 52, 1))
+    height: 375px
+    @apply flex justify-around py-5
+    #homeSection1div1
+        @apply w-1/2
+        img
+            width: 700px
+            height: 500px
+            @apply m-auto
+    #homeSection1div2
+        @apply w-1/2 font-bold text-7xl mb-10 my-auto
+        a
+            @apply mt-5
+        button
+            @apply border-4 border-black bg-black rounded-xl text-white transition duration-300 ease-in-out text-6xl
+        button:hover
+            @apply scale-105
+
+            

@@ -15,7 +15,6 @@ export class HeaderComponent {
 
   ngOnInit(): void {
     this.currentUrl = this.document.location.pathname;
-    console.log(this.currentUrl);
   }
 
   isActive(url: string): boolean {
