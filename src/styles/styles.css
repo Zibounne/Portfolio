@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 header {
-  @apply w-1/2 bg-black text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4;
+  @apply w-1/2 bg-neutral-950 text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4 transition-transform duration-300 ease-linear transform;
 }
 header nav {
   @apply flex justify-between;
@@ -27,7 +27,7 @@ header nav ul li button.active {
 }
 
 footer p {
-  @apply py-2 text-center text-white bg-black;
+  @apply py-2 text-center text-white bg-neutral-950;
 }
 footer p span {
   @apply text-sky-600 font-bold;
@@ -59,10 +59,10 @@ footer p span {
 }
 @keyframes slide {
   0% {
-    @apply w-[35%] bg-green-500;
+    @apply w-[35%] bg-sky-600;
   }
   100% {
-    @apply w-[0%] bg-green-500;
+    @apply w-[0%] bg-sky-600;
   }
 }
 @keyframes blinkColor {
@@ -75,29 +75,35 @@ footer p span {
   100% {
     color: #FFD700;
   }
+  50% {
+    color: #FFFF00;
+  }
+  0% {
+    color: #FFFF99;
+  }
 }
 #homeSection1 {
   background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
-  @apply flex justify-around pt-14 py-5 h-[410px];
+  @apply flex justify-around pt-14 py-5 h-screen border-b-8 border-neutral-950;
 }
 #homeSection1 #homeSection1div1 {
   @apply w-1/2;
 }
 #homeSection1 #homeSection1div1 img {
   animation: translate 0.75s ease-out;
-  @apply m-auto w-[700px] h-[500px];
+  @apply m-auto w-[700px] h-[750px] mt-60;
 }
 #homeSection1 #homeSection1div2 {
-  @apply w-1/2 font-bold text-7xl mb-10 my-auto;
+  @apply w-1/2 font-bold text-8xl my-auto;
 }
 #homeSection1 #homeSection1div2 p {
-  @apply py-2;
+  @apply py-2 cursor-default;
 }
 #homeSection1 #homeSection1div2 a {
   @apply mt-5;
 }
 #homeSection1 #homeSection1div2 button {
-  @apply border-4 border-black bg-black rounded-xl text-white transition duration-300 ease-in-out text-6xl;
+  @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl;
 }
 #homeSection1 #homeSection1div2 button:hover {
   @apply scale-105;
@@ -116,5 +122,9 @@ footer p span {
 }
 
 .homeSection1-blinkColor-Animation {
-  animation: blinkColor 1s linear infinite alternate;
+  animation: blinkColor 2s linear infinite alternate;
+}
+
+#homeSection2 {
+  @apply h-screen pt-14;
 }/*# sourceMappingURL=styles.css.map */

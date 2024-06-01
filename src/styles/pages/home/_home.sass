@@ -22,9 +22,10 @@
 
 @keyframes slide
     0%
-        @apply w-[35%] bg-green-500
+        @apply w-[35%] bg-sky-600
     100%
-        @apply w-[0%] bg-green-500
+        @apply w-[0%] bg-sky-600
+
 @keyframes blinkColor
     0%
         color: #FFFF99
@@ -32,7 +33,11 @@
         color: #FFFF00
     100%
         color: #FFD700
-
+    50%
+        color: #FFFF00
+    0%
+        color: #FFFF99
+        
 //Section 2
 
 /////////////////////////// Home ///////////////////////////
@@ -41,20 +46,20 @@
 
 #homeSection1
     background: radial-gradient(ellipse, rgba(32,35,42, 0.80), rgba(40, 44, 52, 1))
-    @apply flex justify-around pt-14 py-5 h-[410px]
+    @apply flex justify-around pt-14 py-5 h-screen border-b-8 border-neutral-950
     #homeSection1div1
         @apply w-1/2
         img
             animation: translate 0.75s ease-out
-            @apply m-auto w-[700px] h-[500px]
+            @apply m-auto w-[700px] h-[750px] mt-60
     #homeSection1div2
-        @apply w-1/2 font-bold text-7xl mb-10 my-auto
+        @apply w-1/2 font-bold text-8xl my-auto
         p
-            @apply py-2
+            @apply py-2 cursor-default
         a
             @apply mt-5
         button
-            @apply border-4 border-black bg-black rounded-xl text-white transition duration-300 ease-in-out text-6xl
+            @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl
         button:hover
             @apply scale-105
 
@@ -67,7 +72,9 @@
 .homeSection1-slideText-Animation
     animation: slide 0.5s ease-in-out forwards
 .homeSection1-blinkColor-Animation
-    animation: blinkColor 1s linear infinite alternate
+    animation: blinkColor 2s linear infinite alternate
 
 //Section 2
+
 #homeSection2
+    @apply h-screen pt-14

@@ -12,9 +12,9 @@ Coding Time {Portfolio}
 <br>
 [![WakaTime](https://wakatime.com/badge/github/Zibounne/Portfolio.svg?style=default)](https://wakatime.com/badge/github/Zibounne/Portfolio)
 
-## Screenshots
+## Screenshot
 
-![screenshoot](./src/assets/pictures/github/screenshoot.png)
+![screenshot](./src/assets/pictures/github/screenshoot.png)
 
 ## Author
 
