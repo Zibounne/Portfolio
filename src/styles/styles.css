@@ -84,7 +84,7 @@ footer p span {
 }
 #homeSection1 {
   background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
-  @apply flex justify-around pt-14 py-5 h-screen border-b-8 border-neutral-950;
+  @apply h-screen snap-start snap-always flex justify-around pt-14 py-5 border-b-8 border-neutral-950;
 }
 #homeSection1 #homeSection1div1 {
   @apply w-1/2;
@@ -126,5 +126,5 @@ footer p span {
 }
 
 #homeSection2 {
-  @apply h-screen pt-14;
+  @apply h-screen snap-start snap-always pt-14;
 }/*# sourceMappingURL=styles.css.map */
