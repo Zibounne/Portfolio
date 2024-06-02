@@ -14,12 +14,6 @@
     100%
         opacity: 1
 
-@keyframes blink
-    0%, 100%
-        opacity: 1
-    50%
-        opacity: 0
-
 @keyframes slide
     0%
         @apply w-[35%] bg-sky-600
@@ -28,15 +22,37 @@
 
 @keyframes blinkColor
     0%
-        color: #FFFF99
+        @apply text-sky-800
     50%
-        color: #FFFF00
+        @apply text-sky-700
     100%
-        color: #FFD700
+        @apply text-sky-600
     50%
-        color: #FFFF00
+        @apply text-sky-700
     0%
-        color: #FFFF99
+        @apply text-sky-800
+
+@keyframes scale
+    0%
+        transform: scale(1)
+    25%
+        transform: scale(1.05)
+    75%
+        transform: scale(1)
+    100%
+        transform: scale(1)
+
+@keyframes disappear
+    0%
+        @apply text-white
+    100%
+        @apply text-black
+
+@keyframes blink
+    0%, 100%
+        opacity: 1
+    50%
+        opacity: 0
         
 //Section 2
 
@@ -67,12 +83,14 @@
 
 .homeSection1-textReveal-Animation
     animation: reveal 1.5s ease-in
-.homeSection1-blink-Animation
-    animation: blink 0.75s ease-in-out 2
 .homeSection1-slideText-Animation
     animation: slide 0.5s ease-in-out forwards
 .homeSection1-blinkColor-Animation
     animation: blinkColor 2s linear infinite alternate
+.homeSection1-blink-Animation
+    animation: blink 0.75s ease-in-out 2
+.homeSection1-disappear-Animation
+    animation: disappear 1s linear
 
 //Section 2
 

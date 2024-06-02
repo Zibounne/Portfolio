@@ -5,7 +5,7 @@ import { Inject, Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-export class ScrollService {
+export class ScrollSectionService {
 
   private section: HTMLElement | null = null;
 

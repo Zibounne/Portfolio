@@ -7,6 +7,7 @@ import { Component, HostListener, Inject } from '@angular/core';
   imports: [],
   templateUrl: './header.component.html',
 })
+
 export class HeaderComponent {
 
   private lastScrollTop: number = 0;
