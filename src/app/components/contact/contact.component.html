@@ -1,1 +1,24 @@
-<p>contact works!</p>
+<div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-6">Contactez-nous</h2>
+    <form class="w-full max-w-lg bg-white p-8 rounded shadow-md" (submit)="sendEmail($event)">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nom</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="from_name" type="text" placeholder="Votre nom" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="from_email" type="email" placeholder="Votre email" required>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Envoyer
+        </button>
+      </div>
+    </form>
+    <p id="confirmationMessage" class="text-green-600 mt-4 hidden">Merci pour votre message. Nous vous répondrons bientôt.</p>
+  </div>
+  

@@ -21,22 +21,27 @@
 
 ////////////////////////// Projects //////////////////////////
 
-//Section 1
+//Sections
 
-#projectsSection1
-    @apply h-screen snap-start snap-always pt-16 bg-slate-200
-    h1
-        @apply font-bold text-6xl bg-white rounded-lg shadow-lg py-5 w-1/4 m-auto text-center
-    @include card
+#projectsSections
+    @apply bg-gradient-to-b from-gray-200 to-gray-400
 
-//Section 2
+    //Section 1
 
-#projectsSection2
-    @apply h-screen snap-start snap-always pt-16 bg-slate-200
-    @include card
+    #projectsSection1
+        @apply h-screen snap-start snap-always pt-16
+        h1
+            @apply font-bold text-6xl bg-white rounded-lg shadow-lg py-5 w-1/4 m-auto text-center
+        @include card
 
-//Section 3
+    //Section 2
 
-#projectsSection3
-    @apply h-screen snap-start snap-always pt-16 bg-slate-200
-    @include card
+    #projectsSection2
+        @apply h-screen snap-start snap-always pt-16
+        @include card
+
+    //Section 3
+
+    #projectsSection3
+        @apply h-screen snap-start snap-always pt-16
+        @include card
