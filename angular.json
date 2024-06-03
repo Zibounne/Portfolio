@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -32,6 +33,11 @@
               "src/styles/styles.sass"
             ],
             "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            },
             "baseHref": "/Portfolio/"
           },
           "configurations": {
