@@ -78,7 +78,7 @@ footer p span {
     @apply w-[0%] bg-sky-600;
   }
 }
-@keyframes blinkColor {
+@keyframes blinkColorSky {
   0% {
     @apply text-sky-800;
   }
@@ -93,6 +93,23 @@ footer p span {
   }
   0% {
     @apply text-sky-800;
+  }
+}
+@keyframes blinkColorGold {
+  0% {
+    @apply text-yellow-300;
+  }
+  50% {
+    @apply text-yellow-400;
+  }
+  100% {
+    @apply text-yellow-500;
+  }
+  50% {
+    @apply text-yellow-400;
+  }
+  0% {
+    @apply text-yellow-300;
   }
 }
 @keyframes scale {
@@ -147,8 +164,12 @@ footer p span {
   animation: slide 0.5s ease-in-out forwards;
 }
 
-.blinkColor-Animation {
-  animation: blinkColor 2s linear infinite alternate;
+.blinkColorSky-Animation {
+  animation: blinkColorSky 2s linear infinite alternate;
+}
+
+.blinkColorGold-Animation {
+  animation: blinkColorGold 1s linear infinite alternate;
 }
 
 .blink-Animation {
@@ -188,7 +209,7 @@ footer p span {
   @apply mt-5;
 }
 #homeSection1 #homeSection1div2 a button {
-  @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl;
+  @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl shadow-2xl;
 }
 #homeSection1 #homeSection1div2 a button:hover {
   @apply scale-105;
@@ -205,7 +226,7 @@ footer p span {
 }
 #homeSection2 #homeSection2Head #homeSection2HeadPicture img {
   animation: zoomInOut 2s infinite alternate;
-  @apply m-auto border-4 border-sky-600 rounded-lg;
+  @apply m-auto border-4 border-sky-600 rounded-lg shadow-2xl;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText {
   @apply w-1/2;
@@ -220,7 +241,7 @@ footer p span {
   @apply text-green-500 font-bold;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText p span a button {
-  @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5;
+  @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5 shadow-2xl;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText p span a button:hover {
   @apply scale-105;
@@ -235,7 +256,7 @@ footer p span {
   @apply transition duration-300 ease-in-out;
 }
 #homeSection2 #homeSection2Content a img {
-  @apply border-4 border-sky-600 rounded-lg;
+  @apply border-4 border-sky-600 rounded-lg shadow-2xl;
 }
 #homeSection2 #homeSection2Foot {
   @apply text-center mt-5;
@@ -247,7 +268,7 @@ footer p span {
   @apply text-green-500;
 }
 #homeSection2 #homeSection2Foot a button {
-  @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5;
+  @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5 shadow-2xl;
 }
 #homeSection2 #homeSection2Foot a button:hover {
   @apply scale-105;
@@ -270,4 +291,91 @@ footer p span {
 }
 #homeSection3 img {
   @apply absolute z-0 object-cover h-screen w-full;
+}
+
+#projectsSection1 {
+  @apply h-screen snap-start snap-always pt-16 bg-slate-200;
+}
+#projectsSection1 h1 {
+  @apply font-bold text-6xl bg-white rounded-lg shadow-lg py-5 w-1/4 m-auto text-center;
+}
+#projectsSection1 div {
+  @apply flex py-4;
+}
+#projectsSection1 div a {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl;
+}
+#projectsSection1 div a img {
+  @apply m-auto py-2 w-16;
+}
+#projectsSection1 div a h2 {
+  @apply font-bold text-2xl py-2 text-center bg-white;
+}
+#projectsSection1 div a p {
+  @apply text-base bg-white text-gray-950 rounded-b-lg pb-4;
+}
+#projectsSection1 div a p span {
+  @apply text-red-500;
+}
+#projectsSection1 div a:hover {
+  @apply scale-105 duration-100;
+}
+
+#projectsSection2 {
+  @apply h-screen snap-start snap-always pt-16 bg-slate-200;
+}
+#projectsSection2 div {
+  @apply flex py-4;
+}
+#projectsSection2 div a {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl;
+}
+#projectsSection2 div a img {
+  @apply m-auto py-2 w-16;
+}
+#projectsSection2 div a h2 {
+  @apply font-bold text-2xl py-2 text-center bg-white;
+}
+#projectsSection2 div a p {
+  @apply text-base bg-white text-gray-950 rounded-b-lg pb-4;
+}
+#projectsSection2 div a p span {
+  @apply text-red-500;
+}
+#projectsSection2 div a:hover {
+  @apply scale-105 duration-100;
+}
+
+#projectsSection3 {
+  @apply h-screen snap-start snap-always pt-16 bg-slate-200;
+}
+#projectsSection3 div {
+  @apply flex py-4;
+}
+#projectsSection3 div a {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl;
+}
+#projectsSection3 div a img {
+  @apply m-auto py-2 w-16;
+}
+#projectsSection3 div a h2 {
+  @apply font-bold text-2xl py-2 text-center bg-white;
+}
+#projectsSection3 div a p {
+  @apply text-base bg-white text-gray-950 rounded-b-lg pb-4;
+}
+#projectsSection3 div a p span {
+  @apply text-red-500;
+}
+#projectsSection3 div a:hover {
+  @apply scale-105 duration-100;
 }/*# sourceMappingURL=styles.css.map */

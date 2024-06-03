@@ -18,7 +18,7 @@
     100%
         @apply w-[0%] bg-sky-600
 
-@keyframes blinkColor
+@keyframes blinkColorSky
     0%
         @apply text-sky-800
     50%
@@ -29,6 +29,18 @@
         @apply text-sky-700
     0%
         @apply text-sky-800
+
+@keyframes blinkColorGold
+    0%
+        @apply text-yellow-300
+    50%
+        @apply text-yellow-400
+    100%
+        @apply text-yellow-500
+    50%
+        @apply text-yellow-400
+    0%
+        @apply text-yellow-300
 
 @keyframes scale
     0%
@@ -68,8 +80,11 @@
     animation: reveal 1.5s ease-in-out
 .slideText-Animation
     animation: slide 0.5s ease-in-out forwards
-.blinkColor-Animation
-    animation: blinkColor 2s linear infinite alternate
+
+.blinkColorSky-Animation
+    animation: blinkColorSky 2s linear infinite alternate
+.blinkColorGold-Animation
+    animation: blinkColorGold 1s linear infinite alternate
 
 .blink-Animation
     animation: blink 0.75s ease-in-out 2
@@ -100,7 +115,7 @@
         a
             @apply mt-5
             button
-                @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl
+                @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl shadow-2xl
             button:hover
                 @apply scale-105
 
@@ -114,7 +129,7 @@
             @apply w-1/2
             img
                 animation: zoomInOut 2s infinite alternate
-                @apply m-auto border-4 border-sky-600 rounded-lg
+                @apply m-auto border-4 border-sky-600 rounded-lg shadow-2xl
         #homeSection2HeadText
             @apply w-1/2
             h2
@@ -125,7 +140,7 @@
                     @apply text-green-500 font-bold
                     a
                         button
-                            @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5
+                            @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5 shadow-2xl
                         button:hover
                             @apply scale-105
     #homeSection2Content
@@ -135,7 +150,7 @@
         a
             @apply transition duration-300 ease-in-out 
             img
-                @apply border-4 border-sky-600 rounded-lg
+                @apply border-4 border-sky-600 rounded-lg shadow-2xl
     #homeSection2Foot
         @apply text-center mt-5
         p
@@ -144,7 +159,7 @@
                 @apply text-green-500
         a
             button
-                @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5
+                @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5 shadow-2xl
             button:hover
                 @apply scale-105
 

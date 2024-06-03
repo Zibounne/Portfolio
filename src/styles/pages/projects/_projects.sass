@@ -1,0 +1,42 @@
+/////////////////////////// Mixin ///////////////////////////
+
+@mixin card()
+    div
+        @apply flex py-4
+        a
+            display: flex
+            flex-direction: column
+            max-height: 300px
+            @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl
+            img
+                @apply m-auto py-2 w-16
+            h2
+                @apply font-bold text-2xl py-2 text-center bg-white
+            p
+                @apply text-base bg-white text-gray-950 rounded-b-lg pb-4
+                span
+                    @apply text-red-500
+        a:hover
+            @apply scale-105 duration-100
+
+////////////////////////// Projects //////////////////////////
+
+//Section 1
+
+#projectsSection1
+    @apply h-screen snap-start snap-always pt-16 bg-slate-200
+    h1
+        @apply font-bold text-6xl bg-white rounded-lg shadow-lg py-5 w-1/4 m-auto text-center
+    @include card
+
+//Section 2
+
+#projectsSection2
+    @apply h-screen snap-start snap-always pt-16 bg-slate-200
+    @include card
+
+//Section 3
+
+#projectsSection3
+    @apply h-screen snap-start snap-always pt-16 bg-slate-200
+    @include card
