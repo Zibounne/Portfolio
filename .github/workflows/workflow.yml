@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Use Node.js 20
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Replace environment variables
       run: |
-        sed -i "s/emailjsServiceID/${{ secrets.EMAILJSSERVICEID }}/g" src/environment/environment.prod.ts
-        sed -i "s/emailjsTemplateID/${{ secrets.EMAILJSTEMPLATEID }}/g" src/environment/environment.prod.ts
-        sed -i "s/emailjsUserID/${{ secrets.EMAILJSUSERID }}/g" src/environment/environment.prod.ts
+        sed -i "s/EMAILJS_SERVICE_ID/${{ secrets.EMAILJSSERVICEID }}/g" src/environment/environment.prod.ts
+        sed -i "s/EMAILJS_TEMPLATE_ID/${{ secrets.EMAILJSTEMPLATEID }}/g" src/environment/environment.prod.ts
+        sed -i "s/EMAILJS_USER_ID/${{ secrets.EMAILJSUSERID }}/g" src/environment/environment.prod.ts
