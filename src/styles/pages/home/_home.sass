@@ -1,8 +1,6 @@
 ///////////////////////// KeyFrame /////////////////////////
 
-//Section 1
-
-@keyframes translate
+@keyframes translateX
     0%
         transform: translateX(-100%)
     100%
@@ -53,8 +51,29 @@
         opacity: 1
     50%
         opacity: 0
-        
-//Section 2
+
+@keyframes zoomInOut
+    0%
+        transform: scale(1)
+    25%
+        transform: scale(1.1)
+    75%
+        transform: scale(1)
+    100%
+        transform: scale(1)
+
+///////////////////////// Animation /////////////////////////
+
+.textReveal-Animation
+    animation: reveal 1.5s ease-in-out
+.slideText-Animation
+    animation: slide 0.5s ease-in-out forwards
+.blinkColor-Animation
+    animation: blinkColor 2s linear infinite alternate
+.blink-Animation
+    animation: blink 0.75s ease-in-out 2
+.disappear-Animation
+    animation: disappear 1s linear
 
 /////////////////////////// Home ///////////////////////////
 
@@ -66,7 +85,7 @@
     #homeSection1div1
         @apply w-1/2
         img
-            animation: translate 0.75s ease-out
+            animation: translateX 0.75s ease-out
             @apply m-auto w-[700px] h-[750px] mt-60
     #homeSection1div2
         @apply w-1/2 font-bold text-8xl my-auto
@@ -74,25 +93,52 @@
             @apply py-2 cursor-default
         a
             @apply mt-5
-        button
-            @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl
-        button:hover
-            @apply scale-105
-
-//Section 1 | Animation
-
-.homeSection1-textReveal-Animation
-    animation: reveal 1.5s ease-in
-.homeSection1-slideText-Animation
-    animation: slide 0.5s ease-in-out forwards
-.homeSection1-blinkColor-Animation
-    animation: blinkColor 2s linear infinite alternate
-.homeSection1-blink-Animation
-    animation: blink 0.75s ease-in-out 2
-.homeSection1-disappear-Animation
-    animation: disappear 1s linear
+            button
+                @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl
+            button:hover
+                @apply scale-105
 
 //Section 2
 
 #homeSection2
-    @apply h-screen snap-start snap-always pt-14
+    @apply h-screen snap-start snap-always pt-20 py-5 bg-gradient-to-r from-gray-900 to-gray-950
+    #homeSection2Head
+        @apply flex justify-around
+        #homeSection2HeadPicture
+            @apply w-1/2
+            img
+                animation: zoomInOut 2s infinite alternate
+                @apply m-auto border-4 border-sky-600 rounded-lg
+        #homeSection2HeadText
+            @apply w-1/2 pt-10
+            h2
+                @apply text-5xl font-bold text-sky-600 text-center
+            p
+                @apply text-xl mt-4 text-white text-center
+                span
+                    @apply text-green-500 font-bold
+    #homeSection2Content
+        @apply flex justify-around mt-20
+        a:hover
+            @apply scale-105
+        a
+            @apply transition duration-300 ease-in-out 
+            img
+                @apply border-4 border-sky-600 rounded-lg
+    #homeSection2Foot
+        @apply text-center mt-10
+        p
+            @apply text-white text-4xl
+            span
+                @apply text-green-500
+        a
+            button
+                @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5
+            button:hover
+                @apply scale-105
+
+//Section 3
+
+#homeSection3
+    @apply h-screen snap-start snap-always pt-16 py-5
+    
