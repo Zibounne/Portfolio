@@ -1,4 +1,12 @@
+@keyframes translateYFooter
+    0%
+        transform: translateY(100%)
+    100%
+        transform: translateY(0%)
+    
 footer
+    animation: translateYFooter 0.75s ease-out
+    @apply fixed w-full bottom-0 transition-transform duration-300 ease-linear transform
     p
         @apply py-2 text-center text-white bg-neutral-950
         span

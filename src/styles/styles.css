@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@keyframes translateY {
+@keyframes translateYHeader {
   0% {
     transform: translateY(-100%);
   }
@@ -10,7 +10,7 @@
   }
 }
 header {
-  animation: translateY 0.75s ease-out;
+  animation: translateYHeader 0.75s ease-out;
   @apply w-1/2 bg-neutral-950 text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4 transition-transform duration-300 ease-linear transform;
 }
 header nav {
@@ -35,6 +35,18 @@ header nav ul li button.active {
   @apply border-4 border-sky-600 bg-sky-600 rounded text-white;
 }
 
+@keyframes translateYFooter {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+footer {
+  animation: translateYFooter 0.75s ease-out;
+  @apply fixed w-full bottom-0 transition-transform duration-300 ease-linear transform;
+}
 footer p {
   @apply py-2 text-center text-white bg-neutral-950;
 }
@@ -143,6 +155,14 @@ footer p span {
   animation: blink 0.75s ease-in-out 2;
 }
 
+.blinkInfinite-Animation {
+  animation: blink 2s ease-in-out infinite;
+}
+
+.blinkInfiniteFast-Animation {
+  animation: blink 1s ease-in-out infinite;
+}
+
 .disappear-Animation {
   animation: disappear 1s linear;
 }
@@ -156,7 +176,7 @@ footer p span {
 }
 #homeSection1 #homeSection1div1 img {
   animation: translateX 0.75s ease-out;
-  @apply m-auto w-[700px] h-[750px] mt-60;
+  @apply m-auto w-[700px] h-[750px] mt-52;
 }
 #homeSection1 #homeSection1div2 {
   @apply w-1/2 font-bold text-8xl my-auto;
@@ -188,7 +208,7 @@ footer p span {
   @apply m-auto border-4 border-sky-600 rounded-lg;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText {
-  @apply w-1/2 pt-10;
+  @apply w-1/2;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText h2 {
   @apply text-5xl font-bold text-sky-600 text-center;
@@ -199,8 +219,14 @@ footer p span {
 #homeSection2 #homeSection2Head #homeSection2HeadText p span {
   @apply text-green-500 font-bold;
 }
+#homeSection2 #homeSection2Head #homeSection2HeadText p span a button {
+  @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5;
+}
+#homeSection2 #homeSection2Head #homeSection2HeadText p span a button:hover {
+  @apply scale-105;
+}
 #homeSection2 #homeSection2Content {
-  @apply flex justify-around mt-20;
+  @apply flex justify-around mt-14;
 }
 #homeSection2 #homeSection2Content a:hover {
   @apply scale-105;
@@ -212,7 +238,7 @@ footer p span {
   @apply border-4 border-sky-600 rounded-lg;
 }
 #homeSection2 #homeSection2Foot {
-  @apply text-center mt-10;
+  @apply text-center mt-5;
 }
 #homeSection2 #homeSection2Foot p {
   @apply text-white text-4xl;
@@ -221,12 +247,27 @@ footer p span {
   @apply text-green-500;
 }
 #homeSection2 #homeSection2Foot a button {
-  @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5;
+  @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5;
 }
 #homeSection2 #homeSection2Foot a button:hover {
   @apply scale-105;
 }
 
 #homeSection3 {
-  @apply h-screen snap-start snap-always pt-16 py-5;
+  @apply relative flex h-screen items-center justify-center;
+}
+#homeSection3 div {
+  @apply relative z-10 -top-1/3;
+}
+#homeSection3 div p {
+  @apply text-green-500 font-bold text-3xl;
+}
+#homeSection3 div p a button {
+  @apply transition duration-300 ease-in-out;
+}
+#homeSection3 div p a button:hover {
+  @apply border-b-2 border-green-600;
+}
+#homeSection3 img {
+  @apply absolute z-0 object-cover h-screen w-full;
 }/*# sourceMappingURL=styles.css.map */
