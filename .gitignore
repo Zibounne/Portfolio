@@ -44,4 +44,4 @@ Thumbs.db
 # PERSONNAL
 
 notes.txt
-/src/environment/
+/src/environment/environment.ts

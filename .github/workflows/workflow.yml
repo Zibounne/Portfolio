@@ -1,0 +1,20 @@
+name: Replace Environment Variables
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Replace environment variables
+      run: |
+        sed -i "s/emailjsServiceID/${{ secrets.EMAILJSSERVICEID }}/g" src/environment/environment.prod.ts
+        sed -i "s/emailjsTemplateID/${{ secrets.EMAILJSTEMPLATEID }}/g" src/environment/environment.prod.ts
+        sed -i "s/emailjsUserID/${{ secrets.EMAILJSUSERID }}/g" src/environment/environment.prod.ts
