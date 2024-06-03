@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Portfolio": "node dist/portfolio/server/server.mjs",
-    "deploy": "ng build --configuration=production --base-href /Portfolio/ && npx gh-pages -d dist/Portfolio"
+    "deploy": "ng build --configuration=production --base-href /Portfolio/ && npx gh-pages -d dist/portfolio"
   },
   "private": true,
   "dependencies": {

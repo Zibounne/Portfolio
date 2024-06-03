@@ -37,7 +37,8 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "baseHref": "/Portfolio/"
           },
           "configurations": {
             "production": {
@@ -53,7 +54,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/Portfolio/"
             },
             "development": {
               "optimization": false,
