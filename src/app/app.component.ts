@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Inject } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,27 +24,32 @@ import { ScrollSectionService } from './services/scroll/section/scroll-section.s
 
 export class AppComponent implements AfterViewInit {
 
-  ////////////////////////////////// Scroll Section //////////////////////////////////
-
   private sections: HTMLElement[] = [];
   private currentSectionIndex: number = 0;
   private isScrolling: boolean = false;
-  
+
   constructor
   (
     private scrollSectionService: ScrollSectionService,
-    @Inject(DOCUMENT) private document: Document
-  )
+    @Inject(DOCUMENT) private document: Document,
+    private router: Router
+  ) 
   {
-
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.captureSections();
+      }
+    });
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.sections = Array.from(this.document.querySelectorAll('section')) as HTMLElement[];
-      this.document.addEventListener('wheel', (event: WheelEvent) => this.onMouseWheel(event), { passive: false });
-    }, 0);
-  }  
+    this.captureSections();
+    this.document.addEventListener('wheel', (event: WheelEvent) => this.onMouseWheel(event), { passive: false });
+  }
+
+  private captureSections(): void {
+    this.sections = Array.from(this.document.querySelectorAll('section')) as HTMLElement[];
+  }
 
   private onMouseWheel(event: WheelEvent): void {
     event.preventDefault();
@@ -68,7 +73,6 @@ export class AppComponent implements AfterViewInit {
 
   private scrollToPreviousSection(): void {
     if (this.currentSectionIndex > 0) {
-
       this.isScrolling = true;
       this.currentSectionIndex--;
       this.scrollSectionService.scrollToSection(this.sections[this.currentSectionIndex].id);
@@ -77,7 +81,5 @@ export class AppComponent implements AfterViewInit {
       }, 1000);
     }
   }
-
-  ////////////////////////////////////////////////////////////////////////////////////
 
 }
