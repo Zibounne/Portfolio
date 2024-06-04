@@ -10,6 +10,7 @@ import { environment } from '../../../environment/environment';
   imports: [],
   templateUrl: './contact.component.html',
 })
+
 export class ContactComponent {
 
   constructor(private titleService:Title) {

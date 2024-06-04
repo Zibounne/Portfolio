@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 @keyframes translateYHeader {
   0% {
     transform: translateY(-100%);
@@ -11,7 +17,7 @@
 }
 header {
   animation: translateYHeader 0.75s ease-out;
-  @apply w-1/2 bg-neutral-950 text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4 transition-transform duration-300 ease-linear transform;
+  @apply w-1/2 bg-neutral-950 text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4 transition-transform duration-300 ease-linear transform z-10;
 }
 header nav {
   @apply flex justify-between;
@@ -197,7 +203,7 @@ footer p span {
 }
 #homeSection1 #homeSection1div1 img {
   animation: translateX 0.75s ease-out;
-  @apply m-auto w-[700px] h-[750px] mt-52;
+  @apply m-auto relative top-[12%];
 }
 #homeSection1 #homeSection1div2 {
   @apply w-1/2 font-bold text-8xl my-auto;
@@ -278,7 +284,7 @@ footer p span {
   @apply relative flex h-screen items-center justify-center;
 }
 #homeSection3 div {
-  @apply relative z-10 -top-1/3;
+  @apply relative z-10 -top-1/4;
 }
 #homeSection3 div p {
   @apply text-green-500 font-bold text-3xl;
@@ -379,4 +385,73 @@ footer p span {
 }
 #projectsContent #projectsSection3 div a:hover {
   @apply scale-105 duration-100;
+}
+
+@keyframes translateYContactGif {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes translateYContactForm {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.cardTranslateGif-Animation {
+  animation: translateYContactGif 1s ease-out;
+}
+
+.cardTranslateForm-Animation {
+  animation: translateYContactForm 1s ease-out;
+}
+
+#contactBgBlue {
+  background-color: #7DCBDD;
+  @apply w-full h-full -z-10 absolute;
+}
+
+#contactBgYellow {
+  background-color: #FBD22C;
+  @apply w-full h-1/4 -z-10 absolute bottom-0;
+}
+
+#contactSection1 {
+  @apply h-screen snap-start snap-always flex justify-around pt-14;
+}
+#contactSection1 #contactGif {
+  @apply m-auto w-1/2;
+}
+#contactSection1 #contactGif img {
+  @apply m-auto shadow-lg relative;
+}
+#contactSection1 #contactForm {
+  animation: translateYContact 1s ease-out;
+  @apply container m-auto w-1/2;
+}
+#contactSection1 #contactForm h1 {
+  @apply text-6xl font-bold mb-6 text-center;
+}
+#contactSection1 #contactForm form {
+  @apply m-auto max-w-lg bg-white p-8 rounded-lg shadow-2xl;
+}
+#contactSection1 #contactForm form div label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+#contactSection1 #contactForm form div input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+}
+#contactSection1 #contactForm form div button {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none;
+}
+#contactSection1 #contactForm form div textarea {
+  @apply border-2 pt-2 pl-2;
+}
+#contactSection1 #contactForm p {
+  @apply text-green-600 mt-4 hidden;
 }/*# sourceMappingURL=styles.css.map */

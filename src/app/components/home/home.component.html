@@ -18,7 +18,7 @@
             <span class="text-yellow-500 blinkColorGold-Animation">k</span>
             <span class="blinkColorSky-Animation">{{'}'}}</span>
         </p>
-        <a href="/Portfolio/about">
+        <a [routerLink]="['/about']">
             <button class="blink-Animation">about Me</button>
         </a>
     </div>
@@ -36,7 +36,7 @@
             </p>
             <p>For more <span>projects</span>, visit my <span>Projects Hub</span> 
                 <span> =>
-                    <a href="/Portfolio/projects">
+                    <a [routerLink]="['/projects']">
                         <button> Projects Hub </button>
                     </a>
                 <=</span>
@@ -67,18 +67,18 @@
 <section id="homeSection3">
     <div>
         <p>
-            <span class="blinkInfinite-Animation">> </span>
-            <a href="/Portfolio/about">
+            <span class="blinkInfinite-Animation no-select">> </span>
+            <a [routerLink]="['/about']">
                 <button >About Me.</button>
             </a>
         </p>
         <p>
-            <span class="blinkInfinite-Animation">> </span>
-            <a href="/Portfolio/contact">
+            <span class="blinkInfinite-Animation no-select">> </span>
+            <a [routerLink]="['/contact']">
                 <button>Contact.</button>
             </a>
         </p>
-        <p class="blinkInfiniteFast-Animation">
+        <p class="blinkInfiniteFast-Animation no-select">
             /
         </p>
     </div>

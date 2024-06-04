@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Title } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink,
+  ],
   templateUrl: './home.component.html',
 })
 

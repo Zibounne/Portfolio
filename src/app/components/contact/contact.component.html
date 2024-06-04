@@ -1,23 +1,31 @@
-<div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-6">Contactez-nous</h2>
-    <form class="w-full max-w-lg bg-white p-8 rounded shadow-md" (submit)="sendEmail($event)">
+<div id="contactBgBlue"></div>
+<div id="contactBgYellow"></div>
+
+<section id="contactSection1">
+  <div id="contactGif">
+    <img src="assets/pictures/pages/contact/contactSection1Gif.gif" alt="contactGif" draggable="false" class="cardTranslateGif-Animation">
+  </div>
+  <div id="contactForm">
+    <h1 class="cardTranslateForm-Animation">Contact Me</h1>
+    <form (submit)="sendEmail($event)" class="cardTranslateForm-Animation">
       <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nom</label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="from_name" type="text" placeholder="Votre nom" required>
+        <label for="name">Name</label>
+        <input id="name" name="from_name" type="text" placeholder="Your name" required>
       </div>
       <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="from_email" type="email" placeholder="Votre email" required>
+        <label for="email">Email</label>
+        <input id="email" name="from_email" type="email" placeholder="Your email" required>
       </div>
       <div class="mb-6">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" cols="40" rows="10" placeholder="Your message" required></textarea>
       </div>
       <div class="flex items-center justify-between">
-        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-          Envoyer
+        <button type="submit">
+          Submit
         </button>
       </div>
     </form>
-    <p id="confirmationMessage" class="text-green-600 mt-4 hidden">Merci pour votre message. Nous vous répondrons bientôt.</p>
-</div>
+    <p id="confirmationMessage">Thank you for your message. I will respond to you soon !</p>
+  </div>
+</section>
