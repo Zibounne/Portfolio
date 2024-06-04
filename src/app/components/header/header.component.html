@@ -2,33 +2,33 @@
     <nav>
         <ul>
             <li>
-                <button [class]="isActive('/Portfolio') ? 'active' : ''">
-                    <a href="/Portfolio">Home</a>
-                    <a href="/Portfolio/">
+                <button routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a [routerLink]="['/']">Home</a>
+                    <a [routerLink]="['/']">
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </button>
             </li>
             <li>
-                <button [class]="isActive('/Portfolio/projects') ? 'active' : ''">
-                    <a href="/Portfolio/projects">Projects</a>
-                    <a href="/Portfolio/projects">
+                <button routerLinkActive="active">
+                    <a [routerLink]="['/projects']">Projects</a>
+                    <a [routerLink]="['/projects']">
                         <i class="fa-solid fa-book"></i>
                     </a>
                 </button>
             </li>
             <li>
-                <button [class]="isActive('/Portfolio/about') ? 'active' : ''">
-                    <a href="/Portfolio/about">About</a>
-                    <a href="/Portfolio/about">
+                <button routerLinkActive="active">
+                    <a [routerLink]="['/about']">About</a>
+                    <a [routerLink]="['/about']">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </button>
             </li>
             <li>
-                <button [class]="isActive('/Portfolio/contact') ? 'active' : ''">
-                    <a href="/Portfolio/contact">Contact</a>
-                    <a href="/Portfolio/contact">
+                <button routerLinkActive="active">
+                    <a [routerLink]="['/contact']">Contact</a>
+                    <a [routerLink]="['/contact']">
                         <i class="fa-solid fa-address-book"></i>
                     </a>
                 </button>
