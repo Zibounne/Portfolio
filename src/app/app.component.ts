@@ -40,9 +40,12 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.sections = Array.from(this.document.querySelectorAll('section')) as HTMLElement[];
-    this.document.addEventListener('wheel', (event: WheelEvent) => this.onMouseWheel(event), { passive: false });
-  }
+    setTimeout(() => {
+      this.sections = Array.from(this.document.querySelectorAll('section')) as HTMLElement[];
+      console.log('Detected sections:', this.sections); // Log pour vérifier les sections détectées
+      this.document.addEventListener('wheel', (event: WheelEvent) => this.onMouseWheel(event), { passive: false });
+    }, 0);
+  }  
 
   private onMouseWheel(event: WheelEvent): void {
     event.preventDefault();
@@ -55,6 +58,7 @@ export class AppComponent implements AfterViewInit {
 
   private scrollToNextSection(): void {
     if (this.currentSectionIndex < this.sections.length - 1) {
+      console.log('Scrolling to next section:', this.currentSectionIndex + 1); // Ajoutez ceci pour vérifier le scroll
       this.isScrolling = true;
       this.currentSectionIndex++;
       this.scrollSectionService.scrollToSection(this.sections[this.currentSectionIndex].id);
@@ -66,6 +70,8 @@ export class AppComponent implements AfterViewInit {
 
   private scrollToPreviousSection(): void {
     if (this.currentSectionIndex > 0) {
+      console.log('Scrolling to previous section:', this.currentSectionIndex + 1); // Ajoutez ceci pour vérifier le scroll
+
       this.isScrolling = true;
       this.currentSectionIndex--;
       this.scrollSectionService.scrollToSection(this.sections[this.currentSectionIndex].id);
