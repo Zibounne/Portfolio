@@ -391,6 +391,56 @@ footer p span {
   @apply scale-105 duration-100;
 }
 
+@keyframes translateYContactText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes aboutRevealPicture {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.aboutTranslateText-Animation {
+  animation: translateYContactText 1s ease-out;
+}
+
+.aboutRevealPicture-Animation {
+  animation: aboutRevealPicture 2s ease-in-out;
+}
+
+#aboutSection1 {
+  background-color: #E8C0FF;
+  @apply h-screen snap-start snap-always flex justify-around pt-14;
+}
+#aboutSection1 #aboutText {
+  @apply m-auto w-1/2 ml-14;
+}
+#aboutSection1 #aboutText div {
+  @apply rounded-lg shadow-lg p-4 mb-4;
+}
+#aboutSection1 #aboutText div h2 {
+  @apply mb-4 font-bold text-3xl text-sky-600;
+}
+#aboutSection1 #aboutText div p {
+  @apply text-center text-xl text-slate-950;
+}
+#aboutSection1 #aboutText div p span {
+  @apply font-bold text-red-500;
+}
+#aboutSection1 #aboutPicture {
+  @apply m-auto w-1/2;
+}
+#aboutSection1 #aboutPicture img {
+  @apply m-auto;
+}
+
 @keyframes translateYContactGif {
   0% {
     transform: translateX(-100%);

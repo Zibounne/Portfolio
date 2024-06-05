@@ -1,7 +1,42 @@
 ///////////////////////// KeyFrames /////////////////////////
 
+@keyframes translateYContactText
+    0%
+        transform: translateX(-100%)
+    100%
+        transform: translateX(0%)
+
+@keyframes aboutRevealPicture
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
 ///////////////////////// Animation /////////////////////////
+
+.aboutTranslateText-Animation
+    animation: translateYContactText 1s ease-out
+.aboutRevealPicture-Animation
+    animation: aboutRevealPicture 2s ease-in-out
 
 /////////////////////////// About ///////////////////////////
 
 //Section1
+
+#aboutSection1
+    background-color: #E8C0FF
+    @apply h-screen snap-start snap-always flex justify-around pt-14
+    #aboutText
+        @apply m-auto w-1/2 ml-14
+        div
+            @apply rounded-lg shadow-lg p-4 mb-4
+            h2
+                @apply mb-4 font-bold text-3xl text-sky-600
+            p
+                @apply text-center text-xl text-slate-950
+                span
+                    @apply font-bold text-red-500
+    #aboutPicture
+        @apply m-auto w-1/2
+        img
+            @apply m-auto
