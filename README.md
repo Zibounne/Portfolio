@@ -16,7 +16,7 @@ Coding Time {Portfolio}
 
 ## Screenshot
 
-![screenshot](./src/assets/pictures/github/screenshot.png)
+![screenshot](.assets/pictures/github/screenshot.png)
 
 ## Author
 
