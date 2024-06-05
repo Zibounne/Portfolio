@@ -1,6 +1,6 @@
 # Portfolio
-
-Check out my portfolio website : [https://zibounne.github.io/Portfolio/](https://zibounne.github.io/Portfolio/)
+* CodeWars : [https://www.codewars.com/users/Zibounne](https://www.codewars.com/users/Zibounne)
+* Check out my portfolio website : [https://zibounne.github.io/Portfolio/](https://zibounne.github.io/Portfolio/)
 <br><br>
 I'm a passionate junior web developer specializing in full stack development. My portfolio showcases my skills and achievements in web development.
 
