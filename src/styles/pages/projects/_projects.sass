@@ -2,22 +2,25 @@
 
 @mixin card()
     div
-        @apply flex py-4
+        @apply flex py-4 justify-around
         a
             display: flex
             flex-direction: column
-            max-height: 300px
-            @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl
+            width: 250px
+            @apply bg-slate-300 duration-100 text-center rounded-lg shadow-2xl
             img
-                @apply m-auto py-2 w-16
+                height: 64px
+                width: 64px
+                @apply m-auto py-2
             h2
                 @apply font-bold text-2xl py-2 text-center bg-white
             p
-                @apply text-base bg-white text-gray-950 rounded-b-lg pb-4
+                @apply bg-white text-gray-950 rounded-b-lg px-2 h-36
                 span
-                    @apply text-red-500
+                    @apply text-red-500 font-bold
         a:hover
             @apply scale-105 duration-100
+
 
 ////////////////////////// Projects //////////////////////////
 
@@ -30,24 +33,14 @@
 //Sections
 
 #projectsContent
-    @apply bg-gradient-to-b from-gray-300 to-gray-500
+    background: linear-gradient(180deg, rgba(52, 56, 65, 0.8) 0%, rgba(40,44,52,1) 100%)
 
     //Section 1
 
     #projectsSection1
         @apply h-screen snap-start snap-always pt-16
-        h1
-            @apply font-bold text-6xl bg-white rounded-lg shadow-lg py-5 w-1/4 m-auto text-center
-        @include card
-
-    //Section 2
-
-    #projectsSection2
-        @apply h-screen snap-start snap-always pt-16
-        @include card
-
-    //Section 3
-
-    #projectsSection3
-        @apply h-screen snap-start snap-always pt-16
+        div
+            @apply mx-24
+            h1
+                @apply inline-block font-bold text-4xl bg-white rounded-lg shadow-lg p-2 m-auto
         @include card

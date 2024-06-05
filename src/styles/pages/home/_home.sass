@@ -1,11 +1,5 @@
 ///////////////////////// KeyFrames /////////////////////////
 
-@keyframes translateX
-    0%
-        transform: translateX(-100%)
-    100%
-        transform: translateX(0%)
-
 @keyframes reveal
     0%
         opacity: 0
@@ -29,18 +23,6 @@
         @apply text-sky-700
     0%
         @apply text-sky-800
-
-@keyframes blinkColorGold
-    0%
-        @apply text-yellow-300
-    50%
-        @apply text-yellow-400
-    100%
-        @apply text-yellow-500
-    50%
-        @apply text-yellow-400
-    0%
-        @apply text-yellow-300
 
 @keyframes scale
     0%
@@ -74,6 +56,26 @@
     100%
         transform: scale(1)
 
+@keyframes gradientAnimation2
+    0%
+        background: radial-gradient(ellipse, rgba(32, 35, 42, 0.80), rgba(40, 44, 52, 1))
+    25%
+        background: radial-gradient(ellipse, rgba(40, 44, 52, 0.80), rgba(50, 54, 62, 1))
+    50%
+        background: radial-gradient(ellipse, rgba(50, 54, 62, 0.80), rgba(60, 64, 72, 1))
+    75%
+        background: radial-gradient(ellipse, rgba(40, 44, 52, 0.80), rgba(50, 54, 62, 1))
+    100%
+        background: radial-gradient(ellipse, rgba(32, 35, 42, 0.80), rgba(40, 44, 52, 1))
+
+@keyframes gradientAnimation
+    0%
+        background-position: 0% 50%
+    50%
+        background-position: 100% 50%
+    100%
+        background-position: 0% 50%
+
 ///////////////////////// Animation /////////////////////////
 
 .textReveal-Animation
@@ -83,9 +85,6 @@
 
 .blinkColorSky-Animation
     animation: blinkColorSky 2s linear infinite alternate
-.blinkColorGold-Animation
-    animation: blinkColorGold 1s linear infinite alternate
-
 .blink-Animation
     animation: blink 0.75s ease-in-out 2
 .blinkInfinite-Animation
@@ -101,65 +100,61 @@
 //Section 1
 
 #homeSection1
-    background: radial-gradient(ellipse, rgba(32,35,42, 0.80), rgba(40, 44, 52, 1))
-    @apply h-screen snap-start snap-always flex justify-around pt-14 py-5 border-b-8 border-neutral-950
-    #homeSection1div1
-        @apply w-1/2
-        img
-            animation: translateX 0.75s ease-out
-            @apply m-auto relative top-[12%]
+    background: linear-gradient(-45deg, rgba(32, 35, 42, 0.80), rgba(40, 44, 52, 1), rgba(50, 53, 60, 0.80), rgba(60, 64, 72, 1))
+    background-size: 400% 400%
+    animation: gradientAnimation 20s ease infinite
+    @apply h-screen snap-start snap-always border-b-8 border-neutral-950 flex justify-center items-center
     #homeSection1div2
-        @apply w-1/2 font-bold text-8xl my-auto
+        @apply font-bold text-5xl
         p
             @apply py-2 cursor-default
         a
             @apply mt-5
             button
-                @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl shadow-2xl
+                @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-4xl shadow-2xl
             button:hover
                 @apply scale-105
 
 //Section 2
 
 #homeSection2
-    @apply h-screen snap-start snap-always pt-20 py-5 bg-gradient-to-r from-gray-900 to-gray-950
+    background: linear-gradient(180deg, rgba(46,49,57,0.8) 0%, rgba(31,34,40,1) 100%)
+    @apply h-screen snap-start snap-always pt-16 py-5 m-auto
     #homeSection2Head
         @apply flex justify-around
-        #homeSection2HeadPicture
-            @apply w-1/2
-            img
-                animation: zoomInOut 2s infinite alternate
-                @apply m-auto border-4 border-sky-600 rounded-lg shadow-2xl
         #homeSection2HeadText
             @apply w-1/2
             h2
-                @apply text-5xl font-bold text-sky-600 text-center
+                @apply text-5xl font-bold text-sky-600 text-center my-5
             p
-                @apply text-xl mt-4 text-white text-center
+                @apply text-lg mt-2 text-white text-center
                 span
                     @apply text-green-500 font-bold
-                    a
-                        button
-                            @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5 shadow-2xl
-                        button:hover
-                            @apply scale-105
+                a
+                    button
+                        background-color: #2C3033
+                        @apply p-2 border-2 border-slate-300 rounded-xl text-white transition duration-300 ease-in-out text-xl mt-5 shadow-2xl
+                    button:hover
+                        @apply scale-105
     #homeSection2Content
-        @apply flex justify-around mt-14
+        @apply flex justify-around my-14 mx-24
         a:hover
             @apply scale-105
         a
             @apply transition duration-300 ease-in-out 
             img
-                @apply border-4 border-sky-600 rounded-lg shadow-2xl
+                border-color: #25272b
+                @apply border-4 rounded-lg shadow-2xl h-48
     #homeSection2Foot
         @apply text-center mt-5
         p
-            @apply text-white text-4xl
+            @apply text-white text-xl mb-2
             span
                 @apply text-green-500
         a
             button
-                @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5 shadow-2xl
+                background-color: #2C3033
+                @apply p-2 border-2 border-slate-300 rounded-xl text-white transition duration-300 ease-in-out text-xl mt-10 shadow-2xl
             button:hover
                 @apply scale-105
 
@@ -168,7 +163,7 @@
 #homeSection3
     @apply relative flex h-screen items-center justify-center
     div
-        @apply relative z-10 -top-1/4
+        @apply relative z-10 mb-[300px]
         p
             @apply text-green-500 font-bold text-3xl
             a
@@ -177,4 +172,4 @@
                 button:hover
                     @apply border-b-2 border-green-600
     img
-        @apply absolute z-0 object-cover h-screen w-full
+        @apply absolute z-0 h-screen w-full

@@ -60,14 +60,6 @@ footer p span {
   @apply text-sky-600 font-bold;
 }
 
-@keyframes translateX {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 @keyframes reveal {
   0% {
     opacity: 0;
@@ -99,23 +91,6 @@ footer p span {
   }
   0% {
     @apply text-sky-800;
-  }
-}
-@keyframes blinkColorGold {
-  0% {
-    @apply text-yellow-300;
-  }
-  50% {
-    @apply text-yellow-400;
-  }
-  100% {
-    @apply text-yellow-500;
-  }
-  50% {
-    @apply text-yellow-400;
-  }
-  0% {
-    @apply text-yellow-300;
   }
 }
 @keyframes scale {
@@ -162,6 +137,34 @@ footer p span {
     transform: scale(1);
   }
 }
+@keyframes gradientAnimation2 {
+  0% {
+    background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
+  }
+  25% {
+    background: radial-gradient(ellipse, rgba(40, 44, 52, 0.8), rgb(50, 54, 62));
+  }
+  50% {
+    background: radial-gradient(ellipse, rgba(50, 54, 62, 0.8), rgb(60, 64, 72));
+  }
+  75% {
+    background: radial-gradient(ellipse, rgba(40, 44, 52, 0.8), rgb(50, 54, 62));
+  }
+  100% {
+    background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .textReveal-Animation {
   animation: reveal 1.5s ease-in-out;
 }
@@ -172,10 +175,6 @@ footer p span {
 
 .blinkColorSky-Animation {
   animation: blinkColorSky 2s linear infinite alternate;
-}
-
-.blinkColorGold-Animation {
-  animation: blinkColorGold 1s linear infinite alternate;
 }
 
 .blink-Animation {
@@ -195,18 +194,13 @@ footer p span {
 }
 
 #homeSection1 {
-  background: radial-gradient(ellipse, rgba(32, 35, 42, 0.8), rgb(40, 44, 52));
-  @apply h-screen snap-start snap-always flex justify-around pt-14 py-5 border-b-8 border-neutral-950;
-}
-#homeSection1 #homeSection1div1 {
-  @apply w-1/2;
-}
-#homeSection1 #homeSection1div1 img {
-  animation: translateX 0.75s ease-out;
-  @apply m-auto relative top-[12%];
+  background: linear-gradient(-45deg, rgba(32, 35, 42, 0.8), rgb(40, 44, 52), rgba(50, 53, 60, 0.8), rgb(60, 64, 72));
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  @apply h-screen snap-start snap-always border-b-8 border-neutral-950 flex justify-center items-center;
 }
 #homeSection1 #homeSection1div2 {
-  @apply w-1/2 font-bold text-8xl my-auto;
+  @apply font-bold text-5xl;
 }
 #homeSection1 #homeSection1div2 p {
   @apply py-2 cursor-default;
@@ -215,45 +209,40 @@ footer p span {
   @apply mt-5;
 }
 #homeSection1 #homeSection1div2 a button {
-  @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-6xl shadow-2xl;
+  @apply p-2 border-4 border-neutral-950 bg-neutral-950 rounded-xl text-white transition duration-300 ease-in-out text-4xl shadow-2xl;
 }
 #homeSection1 #homeSection1div2 a button:hover {
   @apply scale-105;
 }
 
 #homeSection2 {
-  @apply h-screen snap-start snap-always pt-20 py-5 bg-gradient-to-r from-gray-900 to-gray-950;
+  background: linear-gradient(180deg, rgba(46, 49, 57, 0.8) 0%, rgb(31, 34, 40) 100%);
+  @apply h-screen snap-start snap-always pt-16 py-5 m-auto;
 }
 #homeSection2 #homeSection2Head {
   @apply flex justify-around;
-}
-#homeSection2 #homeSection2Head #homeSection2HeadPicture {
-  @apply w-1/2;
-}
-#homeSection2 #homeSection2Head #homeSection2HeadPicture img {
-  animation: zoomInOut 2s infinite alternate;
-  @apply m-auto border-4 border-sky-600 rounded-lg shadow-2xl;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText {
   @apply w-1/2;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText h2 {
-  @apply text-5xl font-bold text-sky-600 text-center;
+  @apply text-5xl font-bold text-sky-600 text-center my-5;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText p {
-  @apply text-xl mt-4 text-white text-center;
+  @apply text-lg mt-2 text-white text-center;
 }
 #homeSection2 #homeSection2Head #homeSection2HeadText p span {
   @apply text-green-500 font-bold;
 }
-#homeSection2 #homeSection2Head #homeSection2HeadText p span a button {
-  @apply p-2 border-2 border-slate-300 bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-3xl mt-5 shadow-2xl;
+#homeSection2 #homeSection2Head #homeSection2HeadText p a button {
+  background-color: #2C3033;
+  @apply p-2 border-2 border-slate-300 rounded-xl text-white transition duration-300 ease-in-out text-xl mt-5 shadow-2xl;
 }
-#homeSection2 #homeSection2Head #homeSection2HeadText p span a button:hover {
+#homeSection2 #homeSection2Head #homeSection2HeadText p a button:hover {
   @apply scale-105;
 }
 #homeSection2 #homeSection2Content {
-  @apply flex justify-around mt-14;
+  @apply flex justify-around my-14 mx-24;
 }
 #homeSection2 #homeSection2Content a:hover {
   @apply scale-105;
@@ -262,19 +251,21 @@ footer p span {
   @apply transition duration-300 ease-in-out;
 }
 #homeSection2 #homeSection2Content a img {
-  @apply border-4 border-sky-600 rounded-lg shadow-2xl;
+  border-color: #25272b;
+  @apply border-4 rounded-lg shadow-2xl h-48;
 }
 #homeSection2 #homeSection2Foot {
   @apply text-center mt-5;
 }
 #homeSection2 #homeSection2Foot p {
-  @apply text-white text-4xl;
+  @apply text-white text-xl mb-2;
 }
 #homeSection2 #homeSection2Foot p span {
   @apply text-green-500;
 }
 #homeSection2 #homeSection2Foot a button {
-  @apply p-2 border-2 border-slate-300  bg-zinc-900 rounded-xl text-white transition duration-300 ease-in-out text-6xl mt-5 shadow-2xl;
+  background-color: #2C3033;
+  @apply p-2 border-2 border-slate-300 rounded-xl text-white transition duration-300 ease-in-out text-xl mt-10 shadow-2xl;
 }
 #homeSection2 #homeSection2Foot a button:hover {
   @apply scale-105;
@@ -284,7 +275,7 @@ footer p span {
   @apply relative flex h-screen items-center justify-center;
 }
 #homeSection3 div {
-  @apply relative z-10 -top-1/4;
+  @apply relative z-10 mb-[300px];
 }
 #homeSection3 div p {
   @apply text-green-500 font-bold text-3xl;
@@ -296,7 +287,7 @@ footer p span {
   @apply border-b-2 border-green-600;
 }
 #homeSection3 img {
-  @apply absolute z-0 object-cover h-screen w-full;
+  @apply absolute z-0 h-screen w-full;
 }
 
 #projectsArrow img {
@@ -304,90 +295,41 @@ footer p span {
 }
 
 #projectsContent {
-  @apply bg-gradient-to-b from-gray-300 to-gray-500;
+  background: linear-gradient(180deg, rgba(52, 56, 65, 0.8) 0%, rgb(40, 44, 52) 100%);
 }
 #projectsContent #projectsSection1 {
   @apply h-screen snap-start snap-always pt-16;
 }
-#projectsContent #projectsSection1 h1 {
-  @apply font-bold text-6xl bg-white rounded-lg shadow-lg py-5 w-1/4 m-auto text-center;
+#projectsContent #projectsSection1 div {
+  @apply mx-24;
+}
+#projectsContent #projectsSection1 div h1 {
+  @apply inline-block font-bold text-4xl bg-white rounded-lg shadow-lg p-2 m-auto;
 }
 #projectsContent #projectsSection1 div {
-  @apply flex py-4;
+  @apply flex py-4 justify-around;
 }
 #projectsContent #projectsSection1 div a {
   display: flex;
   flex-direction: column;
-  max-height: 300px;
-  @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl;
+  width: 250px;
+  @apply bg-slate-300 duration-100 text-center rounded-lg shadow-2xl;
 }
 #projectsContent #projectsSection1 div a img {
-  @apply m-auto py-2 w-16;
+  height: 64px;
+  width: 64px;
+  @apply m-auto py-2;
 }
 #projectsContent #projectsSection1 div a h2 {
   @apply font-bold text-2xl py-2 text-center bg-white;
 }
 #projectsContent #projectsSection1 div a p {
-  @apply text-base bg-white text-gray-950 rounded-b-lg pb-4;
+  @apply bg-white text-gray-950 rounded-b-lg px-2 h-36;
 }
 #projectsContent #projectsSection1 div a p span {
-  @apply text-red-500;
+  @apply text-red-500 font-bold;
 }
 #projectsContent #projectsSection1 div a:hover {
-  @apply scale-105 duration-100;
-}
-#projectsContent #projectsSection2 {
-  @apply h-screen snap-start snap-always pt-16;
-}
-#projectsContent #projectsSection2 div {
-  @apply flex py-4;
-}
-#projectsContent #projectsSection2 div a {
-  display: flex;
-  flex-direction: column;
-  max-height: 300px;
-  @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl;
-}
-#projectsContent #projectsSection2 div a img {
-  @apply m-auto py-2 w-16;
-}
-#projectsContent #projectsSection2 div a h2 {
-  @apply font-bold text-2xl py-2 text-center bg-white;
-}
-#projectsContent #projectsSection2 div a p {
-  @apply text-base bg-white text-gray-950 rounded-b-lg pb-4;
-}
-#projectsContent #projectsSection2 div a p span {
-  @apply text-red-500;
-}
-#projectsContent #projectsSection2 div a:hover {
-  @apply scale-105 duration-100;
-}
-#projectsContent #projectsSection3 {
-  @apply h-screen snap-start snap-always pt-16;
-}
-#projectsContent #projectsSection3 div {
-  @apply flex py-4;
-}
-#projectsContent #projectsSection3 div a {
-  display: flex;
-  flex-direction: column;
-  max-height: 300px;
-  @apply bg-slate-300 w-1/4 duration-100 text-center mx-20 rounded-lg shadow-2xl;
-}
-#projectsContent #projectsSection3 div a img {
-  @apply m-auto py-2 w-16;
-}
-#projectsContent #projectsSection3 div a h2 {
-  @apply font-bold text-2xl py-2 text-center bg-white;
-}
-#projectsContent #projectsSection3 div a p {
-  @apply text-base bg-white text-gray-950 rounded-b-lg pb-4;
-}
-#projectsContent #projectsSection3 div a p span {
-  @apply text-red-500;
-}
-#projectsContent #projectsSection3 div a:hover {
   @apply scale-105 duration-100;
 }
 
@@ -416,26 +358,32 @@ footer p span {
 }
 
 #aboutSection1 {
-  background-color: #E8C0FF;
+  background-color: #B8B9BB;
   @apply h-screen snap-start snap-always flex justify-around pt-14;
 }
 #aboutSection1 #aboutText {
-  @apply m-auto w-1/2 ml-14;
+  @apply m-auto w-1/2 ml-[100px];
 }
 #aboutSection1 #aboutText div {
-  @apply rounded-lg shadow-lg p-4 mb-4;
+  border: 1px solid;
+  border-color: #a8a9aa;
+  background-color: #b3b3b4;
+  @apply rounded-lg shadow-lg p-4 mb-4 duration-100;
 }
 #aboutSection1 #aboutText div h2 {
-  @apply mb-4 font-bold text-3xl text-sky-600;
+  @apply mb-4 font-bold text-2xl text-sky-600;
 }
 #aboutSection1 #aboutText div p {
-  @apply text-center text-xl text-slate-950;
+  @apply text-center text-lg text-slate-950;
 }
 #aboutSection1 #aboutText div p span {
   @apply font-bold text-red-500;
 }
+#aboutSection1 #aboutText div:hover {
+  @apply scale-105 duration-100;
+}
 #aboutSection1 #aboutPicture {
-  @apply m-auto w-1/2;
+  @apply m-auto w-1/2 mr-[100px];
 }
 #aboutSection1 #aboutPicture img {
   @apply m-auto;
@@ -465,13 +413,13 @@ footer p span {
   animation: translateYContactForm 1s ease-out;
 }
 
-#contactBgBlue {
-  background-color: #7DCBDD;
+#contactBg1 {
+  background-color: #989C9B;
   @apply w-full h-full -z-10 absolute;
 }
 
-#contactBgYellow {
-  background-color: #FBD22C;
+#contactBg2 {
+  background-color: #2C3038;
   @apply w-full h-1/4 -z-10 absolute bottom-0;
 }
 
@@ -479,16 +427,17 @@ footer p span {
   @apply h-screen snap-start snap-always flex justify-around pt-14;
 }
 #contactSection1 #contactGif {
-  @apply m-auto w-1/2;
+  @apply m-auto w-1/2 ml-[100px];
 }
 #contactSection1 #contactGif img {
-  @apply m-auto shadow-lg relative;
+  @apply h-1/4 -mb-[200px];
 }
 #contactSection1 #contactForm {
   animation: translateYContact 1s ease-out;
-  @apply container m-auto w-1/2;
+  @apply container m-auto w-1/2 mr-[100px];
 }
 #contactSection1 #contactForm h1 {
+  color: #2C3038;
   @apply text-6xl font-bold mb-6 text-center;
 }
 #contactSection1 #contactForm form {

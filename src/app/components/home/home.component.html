@@ -1,7 +1,4 @@
 <section id="homeSection1">
-    <div id="homeSection1div1">
-        <img src="assets/pictures/pages/home/section1/homeSection1Picture.svg" alt="indexSection1Img" draggable="false">
-    </div>
     <div id="homeSection1div2">
         <p class="text-sky-600 slideText-Animation">Zibounne</p>
         <p>
@@ -10,13 +7,13 @@
         </p>
         <p>
             <span class="textReveal-Animation">Real Name </span>
-            <span class="blinkColorSky-Animation">{{'{'}}</span>
-            <span class="text-yellow-500 blinkColorGold-Animation">T</span>
-            <span class="text-yellow-400 blinkColorGold-Animation">a</span>
-            <span class="text-yellow-300 blinkColorGold-Animation">r</span>
-            <span class="text-yellow-400 blinkColorGold-Animation">i</span>
-            <span class="text-yellow-500 blinkColorGold-Animation">k</span>
-            <span class="blinkColorSky-Animation">{{'}'}}</span>
+            <span class="text-white">{{'{ '}}</span>
+            <span class="blinkColorSky-Animation">T</span>
+            <span class="blinkColorSky-Animation">a</span>
+            <span class="blinkColorSky-Animation">r</span>
+            <span class="blinkColorSky-Animation">i</span>
+            <span class="blinkColorSky-Animation">k</span>
+            <span class="text-white">{{' }'}}</span>
         </p>
         <a [routerLink]="['/about']">
             <button class="blink-Animation">about Me</button>
@@ -26,20 +23,16 @@
 
 <section id="homeSection2">
     <div id="homeSection2Head">
-        <div id="homeSection2HeadPicture">
-            <img src="assets/pictures/pages/home/section2/homeSection2Title.png" alt="headPicture" draggable="false">
-        </div>
         <div id="homeSection2HeadText">
             <h2>My Recent Project</h2>
             <p>
                 This project brings together iconic games that you can play <span>online</span>, either <span>solo</span> or with <span>friends</span> !
             </p>
-            <p>For more <span>projects</span>, visit my <span>Projects Hub</span> 
-                <span> =>
-                    <a [routerLink]="['/projects']">
-                        <button> Projects Hub </button>
-                    </a>
-                <=</span>
+            <p>For more <span>projects</span>, visit my <span>Projects Hub</span></p>
+            <p>
+                <a [routerLink]="['/projects']">
+                    <button> Projects Hub </button>
+                </a>
             </p>
         </div>
     </div>
@@ -68,13 +61,13 @@
         <p>
             <span class="blinkInfinite-Animation no-select">> </span>
             <a [routerLink]="['/about']">
-                <button >About Me.</button>
+                <button >ABOUT ME</button>
             </a>
         </p>
         <p>
             <span class="blinkInfinite-Animation no-select">> </span>
             <a [routerLink]="['/contact']">
-                <button>Contact.</button>
+                <button>CONTACT</button>
             </a>
         </p>
         <p class="blinkInfiniteFast-Animation no-select">
