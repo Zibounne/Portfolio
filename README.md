@@ -12,7 +12,7 @@ All Coding Time Since {Apr 16 2024}
 
 Coding Time {Portfolio}
 <br>
-[![WakaTime](https://wakatime.com/badge/github/Zibounne/Portfolio.svg?style=default)](https://wakatime.com/badge/github/Zibounne/Portfolio)
+[![wakatime](https://wakatime.com/badge/user/018ee67a-8597-4af3-ab6a-199ac4f20f9d/project/018ee67b-4599-472b-afa0-d0bd3877525b.svg)](https://wakatime.com/badge/user/018ee67a-8597-4af3-ab6a-199ac4f20f9d/project/018ee67b-4599-472b-afa0-d0bd3877525b)
 
 ## Screenshot
 
