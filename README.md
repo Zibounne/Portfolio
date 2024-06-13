@@ -24,7 +24,7 @@ Real Name : Tarik DAHHANE
 <br>
 Pseudo : Zibounne
 <br><br>
-Email : <zibounne.portfolio@hotmail.com>
+Email : <tarikdahhane@hotmail.com>
 <br>
 Linkedin   : [#]
 <br>
