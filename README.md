@@ -1,8 +1,6 @@
 # Portfolio
-* Check out my portfolio website : [https://zibounne.github.io/Portfolio/](https://zibounne.github.io/Portfolio/)
-* CodeWars : [https://www.codewars.com/users/Zibounne](https://www.codewars.com/users/Zibounne)
-<br><br>
-I'm a passionate junior web developer specializing in full stack development. My portfolio showcases my skills and achievements in web development.
+
+* Check out my Portfolio website : [https://zibounne.github.io/Portfolio/](https://zibounne.github.io/Portfolio/)
 
 ## Coding Time
 
@@ -24,8 +22,6 @@ Real Name : Tarik DAHHANE
 <br>
 Pseudo : Zibounne
 <br><br>
-Email : <tarikdahhane@hotmail.com>
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tarik.dahhane.pro@gmail.com)
 <br>
-Linkedin   : [#]
-<br>
-GitHub : [Zibounne](https://github.com/Zibounne/)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tarik-dahhane-0777b3313)
