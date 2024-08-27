@@ -8,6 +8,7 @@ import { Title } from '@angular/platform-browser';
   imports: [],
   templateUrl: './about.component.html',
 })
+
 export class AboutComponent {
 
   constructor(private titleService:Title) {
