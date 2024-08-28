@@ -2,20 +2,31 @@
 
 @mixin card()
     div
-        @apply flex py-4 justify-around
+        @apply py-4 justify-around
+        //default
+        @apply grid grid-cols-2 ml-[5%] mr-[5%] gap-4
+        //sm {min:640px}
+        @apply sm:grid sm:grid-cols-4 sm:ml-[5%] sm:mr-[5%]
+        //md {min:768px}
+        @apply md:grid md:grid-cols-4 md:ml-[5%] md:mr-[5%]
+        //lg {min:1024px}
+        @apply lg:grid lg:grid-cols-4 lg:ml-[5%] lg:mr-[5%]
+        //xl {min:1280px}
+        @apply xl:grid xl:grid-cols-4 xl:ml-[10%] xl:mr-[10%]
+        //2xl {min:1536px}
+        @apply 2xl:grid 2xl:grid-cols-4 2xl:ml-[10%] 2xl:mr-[10%]
         a
             display: flex
             flex-direction: column
-            width: 250px
-            @apply bg-slate-300 duration-100 text-center rounded-lg shadow-2xl
+            @apply bg-slate-300 duration-100 text-center rounded-lg shadow-2xl m-auto
             img
                 height: 64px
                 width: 64px
                 @apply m-auto py-2
             h2
-                @apply font-bold text-2xl py-2 text-center bg-white
+                @apply font-bold py-2 text-center bg-white
             p
-                @apply bg-white text-gray-950 rounded-b-lg px-2 h-36
+                @apply bg-white text-gray-950 rounded-b-lg px-2
                 span
                     @apply text-red-500 font-bold
         a:hover
@@ -35,12 +46,69 @@
 #projectsContent
     background: linear-gradient(180deg, rgba(52, 56, 65, 0.8) 0%, rgba(40,44,52,1) 100%)
 
-    //Section 1
+//Section 1
 
-    #projectsSection1
-        @apply h-screen snap-start snap-always pt-16
-        div
-            @apply mx-24
-            h1
-                @apply inline-block font-bold text-4xl bg-white rounded-lg shadow-lg p-2 m-auto
-        @include card
+#projectsSection1
+    @apply min-h-screen pt-16
+    div
+        h1
+            @apply font-bold bg-white rounded-lg shadow-lg p-2 text-center inline
+    @include card
+
+//////////////////////// Responsive ////////////////////////
+
+//Section 1
+
+#projectsSection1
+    a
+        //default
+        @apply w-[125px] mb-[10%]
+        //sm {min:640px}
+        @apply sm:w-[100px]
+        //md {min:768px}
+        @apply md:w-[150px]
+        //lg {min:1024px}
+        @apply lg:w-[200px]
+        //xl {min:1280px}
+        @apply xl:w-[250px]
+        //2xl {min:1536px}
+        @apply 2xl:w-[250px]
+        h2
+            //default
+            @apply text-xs
+            //sm {min:640px}
+            @apply sm:text-xs
+            //md {min:768px}
+            @apply md:text-lg
+            //lg {min:1024px}
+            @apply lg:text-2xl
+            //xl {min:1280px}
+            @apply xl:text-2xl
+            //2xl {min:1536px}
+            @apply 2xl:text-2xl
+        p
+            //default
+            @apply text-xs h-40
+            //sm {min:640px}
+            @apply sm:text-xs sm:h-40
+            //md {min:768px}
+            @apply md:text-xs md:h-52
+            //lg {min:1024px}
+            @apply lg:text-xs lg:h-36
+            //xl {min:1280px}
+            @apply xl:text-sm xl:h-36
+            //2xl {min:1536px}
+            @apply 2xl:text-base 2xl:h-36
+    h1
+        //default
+        @apply text-2xl grid col-span-2
+        //sm {min:640px}
+        @apply sm:text-3xl sm:col-start-2 sm:col-span-2
+        //md {min:768px}
+        @apply md:text-3xl md:col-start-2 md:col-span-2
+        //lg {min:1024px}
+        @apply lg:text-4xl lg:col-start-2 lg:col-span-2
+        //xl {min:1280px}
+        @apply xl:text-4xl xl:col-start-2 xl:col-span-2
+        //2xl {min:1536px}
+        @apply 2xl:text-4xl 2xl:col-start-2 2xl:col-span-2

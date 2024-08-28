@@ -3,10 +3,12 @@
         transform: translateY(-100%)
     100%
         transform: translateY(0%)
-    
+
+////////////////////////// Header //////////////////////////
+
 header
     animation: translateYHeader 0.75s ease-out
-    @apply w-1/2 bg-neutral-950 text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white fixed left-1/4 transition-transform duration-300 ease-linear transform z-10
+    @apply bg-neutral-950 text-white py-2 text-xl font-bold rounded-b-lg border-x-2 border-b-2 border-white transition-transform duration-300 ease-linear transform absolute
     nav
         @apply flex justify-between
         ul
@@ -14,10 +16,55 @@ header
             li
                 @apply pr-5 flex
                 button
-                    @apply transition-all duration-150 ease-in-out px-3
+                    @apply transition-all duration-150 ease-in-out
                     i
                         @apply pl-2
                 button:hover
                     @apply border-b-sky-600 text-sky-600
                 button.active
                     @apply border-4 border-sky-600 bg-sky-600 rounded text-white
+
+//////////////////////// Responsive ////////////////////////
+
+header
+    //default
+    @apply w-full px-2
+    //sm {min:640px}
+    @apply sm:w-full
+    //md {min:768px}
+    @apply md:w-full
+    //lg {min:1024px}
+    @apply lg:w-full
+    //xl {min:1280px}
+    @apply xl:left-1/4 xl:w-1/2
+    //2xl {min:1536px}
+    @apply 2xl:left-1/4 2xl:w-1/2
+    nav
+        ul
+            li
+                button
+                    //default
+                    @apply text-xs
+                    //sm {min:640px}
+                    @apply sm:px-3 sm:py-0 sm:text-xs
+                    //md {min:768px}
+                    @apply md:px-3 md:py-0 md:text-sm
+                    //lg {min:1024px}
+                    @apply lg:px-3 lg:py-0 lg:text-base
+                    //xl {min:1280px}
+                    @apply xl:px-3 xl:py-0 xl:text-lg
+                    //2xl {min:1536px}
+                    @apply 2xl:px-3 2xl:py-0 2xl:text-xl
+                    i
+                        //default
+                        @apply text-xs
+                        //sm {min:640px}
+                        @apply sm:text-xs
+                        //md {min:768px}
+                        @apply md:text-sm
+                        //lg {min:1024px}
+                        @apply lg:text-base
+                        //xl {min:1280px}
+                        @apply xl:text-lg
+                        //2xl {min:1536px}
+                        @apply 2xl:text-xl

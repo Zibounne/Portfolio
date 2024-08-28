@@ -25,27 +25,25 @@
 
 #contactBg1
     background-color: #989C9B
-    @apply w-full h-full -z-10 absolute
+    @apply w-full min-h-screen -z-10 absolute
 #contactBg2
     background-color: #2C3038
     @apply w-full h-1/4 -z-10 absolute bottom-0
 
-//Section1
+//Section 1
 
 #contactSection1
-    @apply h-screen snap-start snap-always flex justify-around pt-14
+    @apply snap-start snap-always justify-around
     #contactGif
-        @apply m-auto w-1/2 ml-[300px]
-        img
-            @apply h-1/4 -mb-[200px]
+        @apply m-auto
     #contactForm
         animation: translateYContact 1s ease-out
-        @apply container m-auto w-1/2 mr-[300px]
+        @apply container m-auto
         h1
             color: #2C3038
-            @apply text-6xl font-bold mb-6 text-center
+            @apply font-bold pb-6 text-center
         form
-            @apply m-auto max-w-lg bg-white p-8 rounded-lg shadow-2xl
+            @apply m-auto bg-white p-8 rounded-lg shadow-2xl
             div
                 label
                     @apply block text-gray-700 text-sm font-bold mb-2
@@ -57,3 +55,99 @@
                     @apply border-2 pt-2 pl-2
         p
             @apply text-green-600 mt-4 hidden
+
+//////////////////////// Responsive ////////////////////////
+
+//Section 1
+
+#contactSection1
+    //default
+    @apply block
+    //sm {min:640px}
+    @apply sm:block
+    //md {min:768px}
+    @apply md:flex
+    //lg {min:1024px}
+    @apply lg:flex
+    //xl {min:1280px}
+    @apply xl:flex
+    //2xl {min:1536px}
+    @apply 2xl:flex
+    #contactGif
+        //default
+        @apply pl-[25%] pr-[0%] w-[75%] pt-[20%] pb-[0%]
+        //sm {min:640px}
+        @apply sm:pl-[5%] sm:w-[75%]
+        //md {min:768px}
+        @apply md:pl-[5%] md:pt-[55%] md:w-[75%] block
+        //lg {min:1024px}
+        @apply lg:pl-[5%] lg:pt-[40%] lg:w-[75%] block
+        //xl {min:1280px}
+        @apply xl:pl-[10%] xl:pt-[30%] xl:w-[75%] block
+        //2xl {min:1536px}
+        @apply 2xl:pl-[20%] 2xl:pt-[25%] 2xl:w-[75%] block
+        img
+            //default
+            @apply h-[50%] w-[50%]
+            //sm {min:640px}
+            @apply sm:h-[50%] sm:w-[50%]
+            //md {min:768px}
+            @apply md:h-[100%] md:w-[100%]
+            //lg {min:1024px}
+            @apply lg:h-[100%] lg:w-[100%]
+            //xl {min:1280px}
+            @apply xl:h-[100%] xl:w-[100%]
+            //2xl {min:1536px}
+            @apply 2xl:h-[100%] 2xl:w-[100%]
+    #contactForm
+        @apply pr-[5%] pl-[5%] pt-[0%] h-[5%]
+        //sm {min:640px}
+        @apply sm:pr-[5%] sm:pt-[0%] sm:h-[5%]
+        //md {min:768px}
+        @apply md:pr-[5%] md:pt-[8%] md:h-[10%]
+        //lg {min:1024px}
+        @apply lg:pr-[5%] lg:pt-[5%] lg:h-[10%]
+        //xl {min:1280px}
+        @apply xl:pr-[10%] xl:pt-[0%] xl:h-[20%]
+        //2xl {min:1536px}
+        @apply 2xl:pr-[20%] 2xl:pt-[0%] 2xl:h-[20%]
+        h1
+            //default
+            @apply text-3xl p-2
+            //sm {min:640px}
+            @apply sm:text-3xl sm:p-3
+            //md {min:768px}
+            @apply md:text-3xl md:p-3
+            //lg {min:1024px}
+            @apply lg:text-5xl lg:p-3
+            //xl {min:1280px}
+            @apply xl:text-6xl xl:p-4
+            //2xl {min:1536px}
+            @apply 2xl:text-6xl 2xl:p-4
+        form
+            //default
+            @apply w-[100%]
+            //sm {min:640px}
+            @apply sm:w-[100%]
+            //md {min:768px}
+            @apply md:w-[100%]
+            //lg {min:1024px}
+            @apply lg:w-[100%]
+            //xl {min:1280px}
+            @apply xl:w-[75%]
+            //2xl {min:1536px}
+            @apply 2xl:w-[75%]
+            div
+                textarea
+                    //default
+                    @apply w-[100%]
+                    //sm {min:640px}
+                    @apply sm:w-[100%]
+                    //md {min:768px}
+                    @apply md:w-[100%]
+                    //lg {min:1024px}
+                    @apply lg:w-[100%]
+                    //xl {min:1280px}
+                    @apply xl:w-[75%]
+                    //2xl {min:1536px}
+                    @apply 2xl:w-[75%]

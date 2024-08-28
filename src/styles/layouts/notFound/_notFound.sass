@@ -1,27 +1,46 @@
 /////////////////////////// NotFound ///////////////////////////
 
-//Section1
+//Section 1
+
 #notFoundSection1
     background-color: #F5F4E1
     justify-content: center
     align-items: center
-    height: 100vh
     text-align: center
     color: #333
-    h1
-        font-size: 36px
-        margin-bottom: 20px
-        @apply pt-10
-    p
-        font-size: 18px
-        margin-bottom: 40px
     div
-        img
-            margin: auto
-    span
-        font-style: italic
-        #span2
-            color: red
-            font-weight: bold
-    a
-        @apply text-blue-500 font-bold
+        @apply h-screen flex-col flex
+        h1
+            font-size: 36px
+            margin-bottom: 20px
+            @apply pt-10 font-bold
+        p
+            padding-bottom: 40px
+        div
+            img
+                margin: auto
+        span
+            font-style: italic
+            #span2
+                color: red
+                font-weight: bold
+        a
+            @apply text-blue-500 font-bold
+
+//////////////////////// Responsive ////////////////////////
+
+#notFoundSection1
+    div
+        p
+            //default
+            @apply text-xs px-2
+            //sm {min:640px}
+            @apply sm:text-sm sm:px-2
+            //md {min:768px}
+            @apply md:text-sm md:px-2
+            //lg {min:1024px}
+            @apply lg:text-base lg:px-0
+            //xl {min:1280px}
+            @apply xl:text-base xl:px-0
+            //2xl {min:1536px}
+            @apply 2xl:text-base 2xl:px-0

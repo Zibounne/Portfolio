@@ -3,7 +3,9 @@
         transform: translateY(100%)
     100%
         transform: translateY(0%)
-    
+
+////////////////////////// Footer //////////////////////////
+
 footer
     animation: translateYFooter 0.75s ease-out
     @apply fixed w-full bottom-0 transition-transform duration-300 ease-linear transform
@@ -11,3 +13,20 @@ footer
         @apply py-2 text-center text-white bg-neutral-950
         span
             @apply text-sky-600 font-bold
+
+//////////////////////// Responsive ////////////////////////
+
+footer
+    p
+        //default
+        @apply text-xs px-2
+        //sm {min:640px}
+        @apply sm:text-xs sm:px-2
+        //md {min:768px}
+        @apply md:text-xs md:px-2
+        //lg {min:1024px}
+         @apply lg:text-xs lg:px-0
+        //xl {min:1280px}
+        @apply xl:text-sm xl:px-0
+        //2xl {min:1536px}
+        @apply 2xl:text-base 2xl:px-0
