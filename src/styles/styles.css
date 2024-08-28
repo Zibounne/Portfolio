@@ -413,7 +413,7 @@ footer p {
 
 #aboutSection1 {
   background-color: #B8B9BB;
-  @apply h-screen snap-start snap-always flex justify-around;
+  @apply min-h-screen flex justify-around;
 }
 #aboutSection1 #aboutText {
   @apply m-auto w-1/2;
@@ -443,12 +443,20 @@ footer p {
   @apply m-auto;
 }
 
+#aboutSection1 {
+  @apply grid grid-cols-1 pt-[25%] pb-[25%];
+  @apply sm:pt-[10%] sm:pb-[10%];
+  @apply md:pt-[5%] md:pb-[5%];
+  @apply lg:flex;
+  @apply xl:flex;
+  @apply 2xl:flex;
+}
 #aboutSection1 #aboutText {
-  @apply pl-[5%];
+  @apply pl-[5%] w-[50%] pt-[5%];
   @apply sm:pl-[5%];
   @apply md:pl-[5%];
-  @apply lg:pl-[10%];
-  @apply xl:pl-[10%];
+  @apply lg:pl-[1%] lg:w-[50%] lg:pt-[2%];
+  @apply xl:pl-[1%];
   @apply 2xl:pl-[10%];
 }
 #aboutSection1 #aboutText div h2 {
@@ -467,23 +475,7 @@ footer p {
   @apply xl:text-lg xl:pl-4 xl:pr-4 xl:pb-4;
   @apply 2xl:text-lg 2xl:pl-4 2xl:pr-4 2xl:pb-4;
 }
-#aboutSection1 #aboutPicture {
-  @apply pr-[5%];
-  @apply sm:pr-[5%];
-  @apply md:pr-[5%];
-  @apply lg:pr-[10%];
-  @apply xl:pr-[10%];
-  @apply 2xl:pr-[10%];
-}
 
-@keyframes translateYContactGif {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
 @keyframes translateYContactForm {
   0% {
     transform: translateY(-100%);
@@ -492,29 +484,13 @@ footer p {
     transform: translateY(0%);
   }
 }
-.cardTranslateGif-Animation {
-  animation: translateYContactGif 1s ease-out;
-}
-
 .cardTranslateForm-Animation {
   animation: translateYContactForm 1s ease-out;
 }
 
-#contactBg1 {
-  background-color: #989C9B;
-  @apply w-full min-h-screen -z-10 absolute;
-}
-
-#contactBg2 {
-  background-color: #2C3038;
-  @apply w-full h-1/4 -z-10 absolute bottom-0;
-}
-
 #contactSection1 {
-  @apply snap-start snap-always justify-around;
-}
-#contactSection1 #contactGif {
-  @apply m-auto;
+  background-color: #989C9B;
+  @apply min-h-screen;
 }
 #contactSection1 #contactForm {
   animation: translateYContact 1s ease-out;
@@ -543,37 +519,13 @@ footer p {
   @apply text-green-600 mt-4 hidden;
 }
 
-#contactSection1 {
-  @apply block;
-  @apply sm:block;
-  @apply md:flex;
-  @apply lg:flex;
-  @apply xl:flex;
-  @apply 2xl:flex;
-}
-#contactSection1 #contactGif {
-  @apply pl-[25%] pr-[0%] w-[75%] pt-[20%] pb-[0%];
-  @apply sm:pl-[5%] sm:w-[75%];
-  @apply md:pl-[5%] md:pt-[55%] md:w-[75%] block;
-  @apply lg:pl-[5%] lg:pt-[40%] lg:w-[75%] block;
-  @apply xl:pl-[10%] xl:pt-[30%] xl:w-[75%] block;
-  @apply 2xl:pl-[20%] 2xl:pt-[25%] 2xl:w-[75%] block;
-}
-#contactSection1 #contactGif img {
-  @apply h-[50%] w-[50%];
-  @apply sm:h-[50%] sm:w-[50%];
-  @apply md:h-[100%] md:w-[100%];
-  @apply lg:h-[100%] lg:w-[100%];
-  @apply xl:h-[100%] xl:w-[100%];
-  @apply 2xl:h-[100%] 2xl:w-[100%];
-}
 #contactSection1 #contactForm {
-  @apply pr-[5%] pl-[5%] pt-[0%] h-[5%];
-  @apply sm:pr-[5%] sm:pt-[0%] sm:h-[5%];
-  @apply md:pr-[5%] md:pt-[8%] md:h-[10%];
-  @apply lg:pr-[5%] lg:pt-[5%] lg:h-[10%];
-  @apply xl:pr-[10%] xl:pt-[0%] xl:h-[20%];
-  @apply 2xl:pr-[20%] 2xl:pt-[0%] 2xl:h-[20%];
+  @apply pr-[5%] pl-[5%] pt-[15%] pb-[10%] h-[5%];
+  @apply sm:pt-[10%] sm:h-[5%];
+  @apply md:pt-[7.5%] md:h-[10%];
+  @apply lg:pt-[5%] lg:h-[10%];
+  @apply xl:pt-[5%] xl:h-[5%];
+  @apply 2xl:pt-[5%] 2xl:h-[5%];
 }
 #contactSection1 #contactForm h1 {
   @apply text-3xl p-2;
@@ -584,18 +536,18 @@ footer p {
   @apply 2xl:text-6xl 2xl:p-4;
 }
 #contactSection1 #contactForm form {
-  @apply w-[100%];
-  @apply sm:w-[100%];
-  @apply md:w-[100%];
-  @apply lg:w-[100%];
-  @apply xl:w-[75%];
-  @apply 2xl:w-[75%];
+  @apply w-[75%];
+  @apply sm:w-[75%];
+  @apply md:w-[75%];
+  @apply lg:w-[75%];
+  @apply xl:w-[50%];
+  @apply 2xl:w-[50%];
 }
 #contactSection1 #contactForm form div textarea {
   @apply w-[100%];
   @apply sm:w-[100%];
   @apply md:w-[100%];
   @apply lg:w-[100%];
-  @apply xl:w-[75%];
-  @apply 2xl:w-[75%];
+  @apply xl:w-[100%];
+  @apply 2xl:w-[100%];
 }/*# sourceMappingURL=styles.css.map */

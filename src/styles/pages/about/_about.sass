@@ -25,7 +25,7 @@
 
 #aboutSection1
     background-color: #B8B9BB
-    @apply h-screen snap-start snap-always flex justify-around
+    @apply min-h-screen flex justify-around
     #aboutText
         @apply m-auto w-1/2
         div
@@ -49,17 +49,29 @@
 //////////////////////// Responsive ////////////////////////
 
 #aboutSection1
+    //default
+    @apply grid grid-cols-1 pt-[25%] pb-[25%]
+    //sm {min:640px}
+    @apply sm:pt-[10%] sm:pb-[10%]
+    //md {min:768px}
+    @apply md:pt-[5%] md:pb-[5%]
+    //lg {min:1024px}
+    @apply lg:flex
+    //xl {min:1280px}
+    @apply xl:flex
+    //2xl {min:1536px}
+    @apply 2xl:flex
     #aboutText
         //default
-        @apply pl-[5%]
+        @apply pl-[5%] w-[50%] pt-[5%]
         //sm {min:640px}
         @apply sm:pl-[5%]
         //md {min:768px}
         @apply md:pl-[5%]
         //lg {min:1024px}
-        @apply lg:pl-[10%]
+        @apply lg:pl-[1%] lg:w-[50%] lg:pt-[2%]
         //xl {min:1280px}
-        @apply xl:pl-[10%]
+        @apply xl:pl-[1%]
         //2xl {min:1536px}
         @apply 2xl:pl-[10%]
         div
@@ -89,16 +101,3 @@
                 @apply xl:text-lg xl:pl-4 xl:pr-4 xl:pb-4
                 //2xl {min:1536px}
                 @apply 2xl:text-lg 2xl:pl-4 2xl:pr-4 2xl:pb-4
-    #aboutPicture
-        //default
-        @apply pr-[5%]
-        //sm {min:640px}
-        @apply sm:pr-[5%]
-        //md {min:768px}
-        @apply md:pr-[5%]
-        //lg {min:1024px}
-        @apply lg:pr-[10%]
-        //xl {min:1280px}
-        @apply xl:pr-[10%]
-        //2xl {min:1536px}
-        @apply 2xl:pr-[10%]
