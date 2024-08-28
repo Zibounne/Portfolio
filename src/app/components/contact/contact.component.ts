@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-
 import { Title } from '@angular/platform-browser';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { environment } from '../../../environment/environment';
 
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
+
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [
+    HeaderComponent,
+    FooterComponent
+  ],
   templateUrl: './contact.component.html',
 })
 
