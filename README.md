@@ -4,7 +4,7 @@
 
 ## Screenshot
 
-![screenshot](src/assets/pictures/github/screenshot.png)
+![screenshot](src/assets/pictures/github/screenshotGithub.png)
 
 ## Author
 
