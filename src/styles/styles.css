@@ -334,7 +334,7 @@ footer p {
   @apply min-h-screen pt-16;
 }
 #projectsSection1 div h1 {
-  @apply font-bold bg-white shadow-lg p-2 text-center inline;
+  @apply font-bold bg-white shadow-lg p-2 text-center inline rounded-lg;
 }
 #projectsSection1 div {
   @apply py-4 justify-around;
