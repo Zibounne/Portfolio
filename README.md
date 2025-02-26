@@ -8,7 +8,7 @@
 
 ## Author
 
-Name : **DAHHANE Tarik**
+Name : **Tarik Dahhane**
 <br>
 Pseudo : **Zibounne**
 

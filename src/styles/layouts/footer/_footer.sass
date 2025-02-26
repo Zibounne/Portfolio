@@ -1,0 +1,25 @@
+///////////////////////// KeyFrames /////////////////////////
+
+@keyframes translateYFooter
+    0%
+        transform: translateY(100%)
+    100%
+        transform: translateY(0%)
+
+////////////////////////// Footer ///////////////////////////
+
+footer
+    animation: translateYFooter 0.75s ease-out
+    width: 100%
+    bottom: 0
+    transition: transform 0.3s linear
+    position: fixed
+
+    p
+        margin: 0px
+        padding-top: 10px
+        padding-bottom: 10px
+        text-align: center
+        color: white
+        font-weight: bold
+        background-color: rgb(14,15,17)

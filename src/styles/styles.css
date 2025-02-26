@@ -1,6 +1,169 @@
 /* ==========================
  * RESET CSS & BASE STYLES
  * ========================== */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  color: white;
+  border: 2px solid rgb(235, 38, 91);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+@keyframes translateYHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+header {
+  animation: translateYHeader 0.75s ease-out;
+  width: 100%;
+  top: 0;
+  transition: transform 0.3s linear;
+  position: fixed;
+  background-color: rgb(14, 15, 17);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+header nav ul {
+  display: flex;
+  margin: auto;
+}
+header nav ul li {
+  padding-right: 10px;
+  display: flex;
+}
+header nav ul li button {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+header nav ul li button a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+header nav ul li button a i {
+  padding-left: 5px;
+}
+header nav ul li button:hover {
+  color: rgb(235, 38, 91);
+  border-bottom-color: rgb(235, 38, 91);
+}
+header nav ul li button.active {
+  border-bottom-color: rgb(235, 38, 91);
+  background-color: rgb(235, 38, 91);
+  color: white;
+  box-shadow: 0 2px 5px rgba(235, 38, 91, 0.6);
+}
+
+@keyframes translateYFooter {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+footer {
+  animation: translateYFooter 0.75s ease-out;
+  width: 100%;
+  bottom: 0;
+  transition: transform 0.3s linear;
+  position: fixed;
+}
+footer p {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(14, 15, 17);
+}
+
+.color-red {
+  color: rgb(235, 38, 91);
+}
+
+.color-black {
+  color: rgb(14, 15, 17);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.textReveal-Animation-home {
+  animation: reveal 1.5s ease-in-out;
+}
+
+.blink-Animation-home {
+  animation: blink 0.75s ease-in-out 2;
+}
+
+#homeSection1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.98), rgb(5, 5, 5), rgba(10, 10, 10, 0.98));
+  background-size: 400% 400%;
+  animation: backgroundAnimation 5s ease infinite;
+}
 #homeSection1 h1 {
-  color: rgb(255, 0, 0);
+  font-size: 50px;
+  color: white;
+}
+#homeSection1 p {
+  font-size: 25px;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

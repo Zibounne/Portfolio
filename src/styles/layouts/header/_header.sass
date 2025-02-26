@@ -1,0 +1,47 @@
+///////////////////////// KeyFrames /////////////////////////
+
+@keyframes translateYHeader
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0%)
+
+////////////////////////// Header ///////////////////////////
+
+header
+    animation: translateYHeader 0.75s ease-out
+    width: 100%
+    top: 0
+    transition: transform 0.3s linear
+    position: fixed
+    background-color: rgb(14,15,17)
+    padding-top: 10px
+    padding-bottom: 10px
+
+    nav
+        display: flex
+        justify-content: space-between
+        font-size: 20px
+        ul
+            display: flex
+            margin: auto
+            li
+                padding-right: 10px
+                display: flex
+                button
+                    background-color: transparent
+                    border: 2px solid transparent
+                    a
+                        color: white
+                        font-weight: bold
+                        text-decoration: none
+                        i
+                            padding-left: 5px
+                button:hover
+                    color: rgb(235, 38, 91)
+                    border-bottom-color: rgb(235, 38, 91)
+                button.active
+                    border-bottom-color: rgb(235, 38, 91)
+                    background-color: rgb(235, 38, 91)
+                    color: white
+                    box-shadow: 0 2px 5px rgba(235, 38, 91, 0.6)
