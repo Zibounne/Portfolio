@@ -166,4 +166,18 @@ footer p {
 #homeSection1 p {
   font-size: 25px;
   color: white;
+}
+#homeSection1 button {
+  color: white;
+  background-color: rgb(235, 38, 91);
+  border-color: rgb(235, 38, 91);
+}
+#homeSection1 button a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+#homeSection1 button:hover {
+  border-color: rgb(182, 29, 70);
+  background-color: rgb(182, 29, 70);
 }/*# sourceMappingURL=styles.css.map */
