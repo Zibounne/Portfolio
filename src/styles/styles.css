@@ -182,6 +182,30 @@ footer p {
   background-color: rgb(182, 29, 70);
 }
 
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.textReveal-Animation-about {
+  animation: reveal 1.5s ease-in-out;
+}
+
+.blink-Animation-about {
+  animation: blink 0.75s ease-in-out 2;
+}
+
 #aboutSection1 {
   height: 90dvh;
   display: flex;
