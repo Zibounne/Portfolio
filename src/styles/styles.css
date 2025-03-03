@@ -149,7 +149,7 @@ footer p {
 }
 
 #homeSection1 {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,4 +180,24 @@ footer p {
 #homeSection1 button:hover {
   border-color: rgb(182, 29, 70);
   background-color: rgb(182, 29, 70);
+}
+
+#aboutSection1 {
+  height: 90dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-left: 5%;
+  color: white;
+  background: rgb(6, 7, 7);
+}
+#aboutSection1 h1, #aboutSection1 h2, #aboutSection1 h3 {
+  font-size: 50px;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#aboutSection1 p, #aboutSection1 ul {
+  font-size: 20px;
 }/*# sourceMappingURL=styles.css.map */
