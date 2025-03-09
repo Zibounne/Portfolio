@@ -129,20 +129,17 @@ header nav ul li button.active {
   }
   header nav {
     font-size: 16px;
-    flex-direction: column;
-    justify-content: center;
   }
   header nav ul {
-    display: block;
+    display: flex;
     text-align: center;
   }
   header nav ul li {
-    padding: 8px 0;
-    display: block;
+    padding: 8px;
   }
   header nav ul li button {
-    font-size: 16px;
-    padding: 10px;
+    font-size: 10px;
+    padding: 5px;
   }
   header nav ul li button:hover {
     color: rgb(235, 38, 91);
@@ -509,8 +506,8 @@ footer p {
 
 @media (max-width: 767px) {
   #projectsSection1 {
-    padding-top: 70%;
-    padding-bottom: 20%;
+    padding-top: 10%;
+    padding-bottom: 75%;
   }
   #projectsSection1 h1 {
     font-size: 50px;
@@ -651,8 +648,8 @@ footer p {
 
 @media (max-width: 767px) {
   #aboutSection1 {
-    margin-top: 80%;
-    margin-bottom: 25%;
+    padding-top: 30%;
+    padding-bottom: 400px;
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
@@ -781,7 +778,8 @@ footer p {
 
 @media (max-width: 767px) {
   #contactSection1 {
-    padding-top: 50%;
+    padding-top: 25%;
+    padding-bottom: 50%;
     margin-top: 20;
   }
   #contactSection1 #contactSection1Form {
