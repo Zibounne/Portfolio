@@ -110,10 +110,6 @@ footer p {
   color: rgb(14, 15, 17);
 }
 
-.font-bold {
-  font-weight: bold;
-}
-
 @keyframes reveal {
   0% {
     opacity: 0;
@@ -162,6 +158,7 @@ footer p {
   color: white;
 }
 #homeSection1 p {
+  margin-top: 0;
   font-size: 25px;
   color: white;
 }
@@ -178,6 +175,101 @@ footer p {
 #homeSection1 button:hover {
   border-color: rgb(182, 29, 70);
   background-color: rgb(182, 29, 70);
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.textReveal-Animation-projects {
+  animation: reveal 1s ease-in-out;
+}
+
+#projectsSection1 {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#projectsSection1 h1 {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+#projectsSection1 div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+#projectsSection1 div a {
+  text-decoration: none;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(235, 38, 91);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+#projectsSection1 div a:hover {
+  transform: translateY(-5px);
+}
+#projectsSection1 div a i {
+  min-height: 25px;
+  max-height: 25px;
+  font-size: 25px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: white;
+  width: 100%;
+  color: rgb(235, 38, 91);
+  text-align: center;
+}
+#projectsSection1 div a h2 {
+  font-size: 25px;
+  margin: 10px 0;
+  color: white;
+}
+#projectsSection1 div a p {
+  margin-top: 0px;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-right: 5%;
+  padding-left: 5%;
+  min-height: 100px;
+  max-height: 100px;
+}
+#projectsSection1 div a span {
+  min-height: 25px;
+  max-height: 25px;
+  font-style: italic;
+  font-size: 17px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.projectsCardOnline {
+  background-color: #00c24a;
+}
+
+.projectsCardInProgress {
+  background-color: #FFA500;
 }
 
 @keyframes reveal {
