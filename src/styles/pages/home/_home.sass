@@ -30,7 +30,7 @@
 
 /////////////////////////// Home ////////////////////////////
 
-//Section 1
+// Section 1
 
 #homeSection1
     height: 100dvh
@@ -42,15 +42,16 @@
 
     h1
         margin-top: 0
-        font-size: 50px
+        margin-bottom: 1%
         color: white
 
     p
         margin-top: 0
-        font-size: 25px
+        margin-bottom: 0
         color: white
 
     button
+        margin-top: 1%
         color: white
         background-color: rgb(235, 38, 91)
         border-color: rgb(235, 38, 91)
@@ -65,3 +66,68 @@
         background-color: rgb(182, 29, 70)
 
 //////////////////////// Responsive /////////////////////////
+
+// Mobiles
+@media (max-width: 767px)
+    #homeSection1
+        padding-top: 10%
+        padding-left: 5%
+        padding-right: 5%
+
+        h1
+            font-size: 40px
+
+        p
+            font-size: 20px
+        
+        button
+            a
+                font-size: 20px
+
+// Tablets & Small computers
+@media (min-width: 768px) and (max-width: 1024px)
+    #homeSection1
+        padding-left: 5%
+        padding-right: 5%
+
+        h1
+            font-size: 40px
+
+        p
+            font-size: 20px
+        
+        button
+            a
+                font-size: 20px
+
+// Desktop
+@media (min-width: 1024px) and (max-width: 2560px)
+    #homeSection1
+        padding-left: 5%
+        padding-right: 5%
+
+        h1
+            font-size: 50px
+
+        p
+            font-size: 30px
+        
+        button
+            a
+                font-size: 30px
+    
+// 4K
+@media (min-width: 2560px)
+    #homeSection1
+        padding-left: 5%
+        padding-right: 5%
+
+        h1
+            font-size: 100px
+
+        p
+            font-size: 50px
+        
+        button
+            a
+                font-size: 50px

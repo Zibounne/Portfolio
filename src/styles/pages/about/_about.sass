@@ -22,7 +22,7 @@
 
 /////////////////////////// About ///////////////////////////
 
-//Section 1
+// Section 1
 
 #aboutSection1
     height: 90dvh
@@ -33,13 +33,71 @@
     color: white
 
     h1, h2, h3
-        font-size: 50px
         padding-bottom: 1%
         padding-top: 1%
         margin-top: 0
         margin-bottom: 0
-    
-    p, ul
-        font-size: 20px
 
 //////////////////////// Responsive /////////////////////////
+
+// Mobiles
+@media (max-width: 767px)
+    #aboutSection1
+        margin-top: 80%
+        margin-bottom: 25%
+        padding-left: 5%
+        padding-right: 5%
+        text-align: center
+
+    h1, h2, h3
+        font-size: 30px
+
+    p, ul
+        font-size: 16px
+        text-align: justify
+        line-height: 1.5
+
+// Tablets & Small computers
+@media (min-width: 768px) and (max-width: 1024px)
+    #aboutSection1
+        padding-top: 15%
+        padding-left: 8%
+        padding-right: 8%
+    
+    h1, h2, h3
+        font-size: 40px
+
+    p, ul
+        font-size: 18px
+        text-align: justify
+        line-height: 1.5
+
+// Desktop
+@media (min-width: 1025px) and (max-width: 2560px)
+    #aboutSection1
+        padding-top: 5%
+        padding-left: 5%
+        padding-right: 5%
+
+    h1, h2, h3
+        font-size: 50px
+
+    p, ul
+        font-size: 20px
+        text-align: justify
+        line-height: 1.5
+    
+// 4K
+@media (min-width: 2560px)
+    #aboutSection1
+        padding-top: 5%
+        padding-left: 5%
+        padding-right: 5%
+
+    h1, h2, h3
+        font-size: 75px
+
+    p, ul
+        font-size: 30px
+        text-align: justify
+        line-height: 1.5
