@@ -190,20 +190,20 @@ footer p {
     opacity: 1;
   }
 }
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
+@keyframes ribbon {
+  0% {
+    background-color: rgb(235, 38, 91);
   }
-  50% {
-    opacity: 0;
+  100% {
+    background-color: none;
   }
 }
 .textReveal-Animation-about {
   animation: reveal 1.5s ease-in-out;
 }
 
-.blink-Animation-about {
-  animation: blink 0.75s ease-in-out 2;
+.ribbon-Animation-about {
+  animation: ribbon 1.5s ease-in-out;
 }
 
 #aboutSection1 {
