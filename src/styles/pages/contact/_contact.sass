@@ -1,15 +1,15 @@
 ///////////////////////// KeyFrames /////////////////////////
 
-@keyframes ribbon
+@keyframes reveal
     0%
-        background-color: rgb(235, 38, 91)
+        opacity: 0
     100%
-        background-color: none
+        opacity: 1
 
 ///////////////////////// Animation /////////////////////////
 
-.ribbon-Animation-contact
-    animation: ribbon 1.5s ease-in-out
+.textReveal-Animation-contact
+    animation: reveal 1s ease-in-out
 
 ///////////////////////// Contact ///////////////////////////
 
@@ -20,9 +20,9 @@
     display: flex
     flex-direction: column
     padding-top: 5%
-    background: rgb(6,7,7)
+    background-color: rgb(6,7,7)
 
-    .contact-form
+    #contactSection1Form
         margin: auto
         padding: 1%
         background: white

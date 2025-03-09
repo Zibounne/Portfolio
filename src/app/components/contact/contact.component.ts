@@ -9,7 +9,7 @@ import { FooterComponent } from '../footer/footer.component';
   standalone: true,
   imports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './contact.component.html',
 })
