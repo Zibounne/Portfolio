@@ -23,6 +23,51 @@ button {
   position: relative;
 }
 
+#notFoundSection1 {
+  height: 100dvh;
+  background-color: #F5F4E1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333;
+}
+#notFoundSection1 div {
+  display: flex;
+  flex-direction: column;
+}
+#notFoundSection1 div h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  padding-top: 2%;
+  font-weight: bold;
+}
+#notFoundSection1 div p {
+  text-align: center;
+}
+#notFoundSection1 div div img {
+  margin: auto;
+}
+#notFoundSection1 div span {
+  font-style: italic;
+}
+#notFoundSection1 div span #span2 {
+  color: red;
+  font-weight: bold;
+}
+#notFoundSection1 div a {
+  font-weight: bold;
+  color: rgb(9, 70, 236);
+}
+
+@media (max-width: 767px) {
+  #notFoundSection1 div {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  #notFoundSection1 div img {
+    width: 50%;
+  }
+}
 @keyframes translateYHeader {
   0% {
     transform: translateY(-100%);
