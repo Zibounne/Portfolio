@@ -154,6 +154,7 @@ footer p {
   text-align: center;
 }
 #homeSection1 h1 {
+  margin-top: 0;
   font-size: 50px;
   color: white;
 }
@@ -173,6 +174,7 @@ footer p {
   text-decoration: none;
 }
 #homeSection1 button:hover {
+  transform: translateY(-5px);
   border-color: rgb(182, 29, 70);
   background-color: rgb(182, 29, 70);
 }
