@@ -496,14 +496,6 @@ footer p {
   text-align: center;
 }
 
-.projectsCardOnline {
-  background-color: #00c24a;
-}
-
-.projectsCardInProgress {
-  background-color: #FFA500;
-}
-
 @media (max-width: 767px) {
   #projectsSection1 {
     padding-top: 10%;
