@@ -791,6 +791,7 @@ footer p {
   #contactSection1 #contactSection1Form {
     width: 75%;
     min-height: 400px;
+    padding: 5%;
   }
   #contactSection1 label {
     font-size: 20px;
@@ -815,6 +816,7 @@ footer p {
   #contactSection1 #contactSection1Form {
     width: 50%;
     min-height: 400px;
+    padding: 2%;
   }
   #contactSection1 label {
     font-size: 20px;
@@ -839,6 +841,7 @@ footer p {
   #contactSection1 #contactSection1Form {
     width: 25%;
     min-height: 400px;
+    padding: 2%;
   }
   #contactSection1 label {
     font-size: 20px;
