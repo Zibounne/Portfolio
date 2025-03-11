@@ -8,7 +8,7 @@
 
 ## 🛠️ Technologies
 
-🔹 Front-End: Angular
+📟 Front-End: Angular
 
 </svg>
 
