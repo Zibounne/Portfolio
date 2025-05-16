@@ -8,7 +8,7 @@
 
 ## 🛠️ Technologies
 
-📟 Front-End: Angular / Sass
+📟 Front-End: **Angular** / **Sass**
 
 ## 👤 Author
 
@@ -20,7 +20,7 @@
 
 ### ⭐ Credits
 
-📟 Coding Time | Portfolio
+📟 Coding Time | **Portfolio**
 <br>
 [![wakatime](https://wakatime.com/badge/user/018ee67a-8597-4af3-ab6a-199ac4f20f9d/project/018ee67b-4599-472b-afa0-d0bd3877525b.svg)](https://wakatime.com/badge/user/018ee67a-8597-4af3-ab6a-199ac4f20f9d/project/018ee67b-4599-472b-afa0-d0bd3877525b)
 <br>
